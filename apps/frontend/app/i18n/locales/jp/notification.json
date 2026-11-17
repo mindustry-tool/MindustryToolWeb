@@ -1,0 +1,122 @@
+{
+  "title": "通知",
+  "empty": "通知はまだありません",
+  "unread": "未読",
+  "all": "すべて",
+  "markAllAsRead": "すべて既読にする",
+  "clearRead": "既読をクリア",
+  "viewAll": "すべての通知を表示",
+  "types": {
+    "VERIFICATION": "審査",
+    "LIKE": "いいね",
+    "SHARE_REWARD": "報酬",
+    "SYSTEM": "システム",
+    "COMMENT": "コメント"
+  },
+  "categories": {
+    "personal": "個人",
+    "system": "システム"
+  },
+  "unreadOnly": "未読のみ",
+  "groupByEntity": "エンティティ別にグループ化",
+  "emptyPersonal": "個人の通知はまだありません。",
+  "emptySystem": "システムのお知らせやメンテ情報はありません。",
+  "allCaughtUp": "すべて確認しました！未読の通知はありません。",
+  "codes": {
+    "verification": {
+      "approved": {
+        "title": "コンテンツが承認されました",
+        "description": "あなたの{{itemType}}「{{itemName}}」が承認されました！{{credits}}クレジットを獲得しました。"
+      },
+      "rejected": {
+        "title": "コンテンツが却下されました",
+        "description": "あなたの{{itemType}}「{{itemName}}」は審査で却下されました。理由：{{reason}}"
+      }
+    },
+    "like": {
+      "single": {
+        "title": "新しいいいね",
+        "description": "{{actorName}}があなたの{{itemType}}「{{itemName}}」にいいねしました。"
+      },
+      "multiple": {
+        "title": "複数の新しいいいね",
+        "description": "{{actorName}}他{{count}}名があなたの{{itemType}}「{{itemName}}」にいいねしました。"
+      }
+    },
+    "share_reward": {
+      "title": "リンク共有報酬",
+      "description": "共有リンクにアクセスがありました！{{credits}}クレジットを獲得しました。"
+    },
+    "system": {
+      "announcement": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      },
+      "maintenance": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      }
+    },
+    "comment": {
+      "post": {
+        "title": "新しいコメント",
+        "description": "{{actorName}} があなたの {{itemType}} 「{{itemName}}」にコメントしました。"
+      },
+      "reply": {
+        "title": "新しい返信",
+        "description": "{{actorName}} が「{{itemName}}」のあなたのコメントに返信しました。"
+      }
+    }
+  },
+  "preferences": {
+    "title": "通知設定",
+    "description": "アプリ内での通知受信方法を管理します。",
+    "inApp": "アプリ内通知を有効化",
+    "verification": "コンテンツ審査通知",
+    "verificationDesc": "アップロードしたコンテンツが審査されたときに通知を受け取ります。",
+    "likes": "いいね通知",
+    "likesDesc": "コンテンツにいいねがついたときに通知を受け取ります。",
+    "rewards": "報酬通知",
+    "rewardsDesc": "共有リンクでクレジットを獲得したときに通知を受け取ります。",
+    "system": "システムからのお知らせ",
+    "systemDesc": "アップデートやメンテナンス情報を受け取ります。",
+    "saved": "通知設定を保存しました。",
+    "comments": "コメントと返信の通知",
+    "commentsDesc": "誰かがあなたのコンテンツにコメントしたとき、または返信したときに通知を受け取ります。",
+    "update-fail": "通知設定の更新に失敗しました"
+  },
+  "admin": {
+    "title": "通知管理",
+    "description": "システムアナウンスを作成してユーザーに配信します。",
+    "target": "対象ユーザー",
+    "targetAll": "全ユーザー (全体配信)",
+    "targetUser": "特定のユーザー",
+    "targetRole": "特定のロール",
+    "targetIdPlaceholder": "ユーザーIDまたはロールIDを入力",
+    "severity": "重要度",
+    "severityInfo": "情報",
+    "severityWarning": "警告",
+    "severityAlert": "緊急",
+    "subject": "件名",
+    "subjectPlaceholder": "お知らせのタイトルを入力...",
+    "message": "本文",
+    "messagePlaceholder": "お知らせのメッセージを入力...",
+    "link": "リンク (任意)",
+    "linkPlaceholder": "/schematics/...",
+    "send": "お知らせを送信",
+    "sending": "配信中...",
+    "sentSuccess": "お知らせを正常に配信しました！",
+    "livePreview": "プレビュー",
+    "history": "配信履歴",
+    "noHistory": "配信履歴はありません。",
+    "historyDate": "日時",
+    "historyTarget": "対象",
+    "historyTitle": "件名",
+    "historyLink": "リンク",
+    "actions": "操作",
+    "delete": "お知らせを削除",
+    "deleteSuccess": "お知らせが正常に削除されました。",
+    "deleteConfirmTitle": "システムお知らせを削除しますか？",
+    "deleteConfirmDesc": "このお知らせを削除してもよろしいですか？すべてのユーザーの受信トレイから完全に削除され、復元することはできません。"
+  }
+}

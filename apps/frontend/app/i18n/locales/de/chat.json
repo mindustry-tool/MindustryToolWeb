@@ -1,0 +1,22 @@
+{
+  "online-users": "Online-Benutzer",
+  "users": "Benutzer",
+  "new-chat": "Neuer Chat",
+  "thinking": "Denkt nach...",
+  "channels": "Kanäle",
+  "online": "Online",
+  "please-sign-in": "Bitte anmelden, um zu chatten",
+  "your-message": "Ihre Nachricht",
+  "read-without-sign-in": "Sie können Nachrichten ohne Anmeldung lesen",
+  "replying-to-message": "Antwort auf Nachricht",
+  "no-message-yet": "Noch keine Nachrichten",
+  "disconnected": "Getrennt",
+  "nobody-online": "Niemand online",
+  "replying": "Antwortet",
+  "reply": "Antworten",
+  "show-less": "Weniger anzeigen",
+  "show-more": "Mehr anzeigen",
+  "original-message-unavailable": "Ursprüngliche Nachricht nicht verfügbar",
+  "ask-anything": "Fragen Sie alles...",
+  "delete-confirm": "Sind Sie sicher, dass Sie diese Nachricht löschen möchten?"
+}

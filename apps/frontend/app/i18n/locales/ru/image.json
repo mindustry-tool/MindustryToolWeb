@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "Облако",
+  "upload-from-local": "Локально",
+  "upload-from-shared": "Общая библиотека",
+  "upload-fail": "Ошибка загрузки",
+  "update": "Обновить",
+  "create-folder": "Создать папку",
+  "model": "Модель",
+  "settings": "Настройки",
+  "aspect-ratio": "Соотношение сторон",
+  "resolution": "Разрешение",
+  "guidance": "Сила подсказки (CFG)",
+  "steps": "Шаги",
+  "prompt": "Промпт",
+  "prompt-placeholder": "Опишите ваше изображение...",
+  "generate": "Сгенерировать"
+}

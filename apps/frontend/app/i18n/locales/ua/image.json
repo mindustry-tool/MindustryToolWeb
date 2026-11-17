@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "Хмара",
+  "upload-from-local": "Локально",
+  "upload-from-shared": "Спільна бібліотека",
+  "upload-fail": "Не вдалося завантажити",
+  "update": "Оновлення",
+  "create-folder": "Створити папку",
+  "model": "Модель",
+  "settings": "Налаштування",
+  "aspect-ratio": "Співвідношення сторін",
+  "resolution": "Роздільна здатність",
+  "guidance": "Сила підказки (CFG)",
+  "steps": "Кроки",
+  "prompt": "Промпт",
+  "prompt-placeholder": "Опишіть ваше зображення...",
+  "generate": "Згенерувати"
+}

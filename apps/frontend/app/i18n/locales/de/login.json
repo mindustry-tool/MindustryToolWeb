@@ -1,0 +1,12 @@
+{
+  "login-to-mindustry": "Bei Mindustry anmelden",
+  "return-to-app": "Zurück zur App",
+  "bad-login-link": "Ungültiger Anmelde-Link",
+  "login-success": "Anmeldung erfolgreich, du kannst diesen Tab schließen",
+  "token-expired": "Token ist abgelaufen, bitte erneut /login ausführen",
+  "token-invalid": "Ungültiges oder abgelaufenes Token",
+  "name": "Benutzername:",
+  "login-btn": "Anmelden",
+  "login-with-discord": "Mit Discord anmelden",
+  "login-with-google": "Mit Google anmelden"
+}

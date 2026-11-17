@@ -1,0 +1,16 @@
+{
+  "new-post": "Bài viết mới",
+  "title": "Tiêu đề",
+  "summary": "Tóm tắt",
+  "cover": "Ảnh bìa",
+  "language": "Ngôn ngữ",
+  "status": "Trạng thái",
+  "status-PUBLISHED": "Đã xuất bản",
+  "select-cover": "Chọn ảnh bìa",
+  "submitting": "Đang gửi",
+  "submit-success": "Gửi thành công",
+  "browse-post": "Duyệt bài viết",
+  "report": "Báo cáo",
+  "status-ARCHIVED": "Đã lưu trữ",
+  "status-DRAFT": "Bản nháp"
+}

@@ -1,0 +1,23 @@
+{
+  "installed": "インストール済みMod",
+  "download": "Modをダウンロード",
+  "install": "Modをインストール",
+  "delete": "Modを削除",
+  "title": "Mod",
+  "nsfw-warning": "警告: 18禁コンテンツ",
+  "more-topics": "+{{count}} 件以上",
+  "no-mod-found": "Modが見つかりません",
+  "hidden-badge": "非公開",
+  "json-badge": "JSON",
+  "default-badge": "デフォルト",
+  "import-mod": "Modをインポート",
+  "import-description": "インポートするModのURLを入力してください。リリースが存在するGitHubリポジトリである必要があります。",
+  "import-url-placeholder": "ModのURLを入力",
+  "import-url-title": "有効なGitHubリポジトリURLを入力してください",
+  "import-invalid-url": "無効なGitHubリポジトリURLです",
+  "select": "選択",
+  "no-release": "リリースなし",
+  "release-draft": "下書き",
+  "release-pre-release": "プレリリース",
+  "downloads": "ダウンロード数"
+}

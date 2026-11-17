@@ -1,0 +1,16 @@
+{
+  "new-post": "새 게시글",
+  "title": "제목",
+  "summary": "요약",
+  "cover": "커버 이미지",
+  "language": "언어",
+  "status": "상태",
+  "status-PUBLISHED": "게시됨",
+  "select-cover": "커버 이미지 선택",
+  "submitting": "제출 중...",
+  "submit-success": "제출 성공",
+  "browse-post": "게시글 보기",
+  "report": "신고",
+  "status-ARCHIVED": "보관됨",
+  "status-DRAFT": "임시저장"
+}

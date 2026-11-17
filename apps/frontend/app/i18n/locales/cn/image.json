@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "云端",
+  "upload-from-local": "本地",
+  "upload-from-shared": "分享库",
+  "upload-fail": "上传失败",
+  "update": "更新",
+  "create-folder": "创建文件夹",
+  "model": "模型",
+  "settings": "设置",
+  "aspect-ratio": "宽高比",
+  "resolution": "分辨率",
+  "guidance": "引导程度 (CFG)",
+  "steps": "步数",
+  "prompt": "提示词",
+  "prompt-placeholder": "描述您的图像...",
+  "generate": "生成"
+}

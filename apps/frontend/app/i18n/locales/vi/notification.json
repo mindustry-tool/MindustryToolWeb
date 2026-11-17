@@ -1,0 +1,122 @@
+{
+  "title": "Thông báo",
+  "empty": "Chưa có thông báo nào",
+  "unread": "Chưa đọc",
+  "all": "Tất cả",
+  "markAllAsRead": "Đánh dấu tất cả là đã đọc",
+  "clearRead": "Xóa đã đọc",
+  "viewAll": "Xem tất cả thông báo",
+  "types": {
+    "VERIFICATION": "Xác minh",
+    "LIKE": "Lượt thích",
+    "SHARE_REWARD": "Phần thưởng",
+    "SYSTEM": "Hệ thống",
+    "COMMENT": "Bình luận"
+  },
+  "categories": {
+    "personal": "Cá nhân",
+    "system": "Hệ thống"
+  },
+  "unreadOnly": "Chỉ chưa đọc",
+  "groupByEntity": "Nhóm theo thực thể",
+  "emptyPersonal": "Bạn chưa có thông báo cá nhân nào.",
+  "emptySystem": "Không có thông báo hệ thống hoặc bảo trì nào.",
+  "allCaughtUp": "Bạn đã xem hết! Không có thông báo chưa đọc nào.",
+  "codes": {
+    "verification": {
+      "approved": {
+        "title": "Nội dung đã được duyệt",
+        "description": "{{itemType}} \"{{itemName}}\" của bạn đã được xác minh và phê duyệt! Bạn nhận được {{credits}} tín dụng."
+      },
+      "rejected": {
+        "title": "Nội dung bị từ chối",
+        "description": "{{itemType}} \"{{itemName}}\" của bạn đã bị từ chối khi xem xét. {{reason}}"
+      }
+    },
+    "like": {
+      "single": {
+        "title": "Lượt thích mới",
+        "description": "{{actorName}} đã thích {{itemType}} \"{{itemName}}\" của bạn."
+      },
+      "multiple": {
+        "title": "Nhiều lượt thích mới",
+        "description": "{{actorName}} và {{count}} người khác đã thích {{itemType}} \"{{itemName}}\" của bạn."
+      }
+    },
+    "share_reward": {
+      "title": "Phần thưởng liên kết chia sẻ",
+      "description": "Liên kết chia sẻ của bạn đã có người truy cập! Bạn nhận được {{credits}} tín dụng."
+    },
+    "system": {
+      "announcement": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      },
+      "maintenance": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      }
+    },
+    "comment": {
+      "post": {
+        "title": "Bình luận mới",
+        "description": "{{actorName}} đã bình luận về {{itemType}} \"{{itemName}}\" của bạn."
+      },
+      "reply": {
+        "title": "Phản hồi mới",
+        "description": "{{actorName}} đã trả lời bình luận của bạn trên \"{{itemName}}\"."
+      }
+    }
+  },
+  "preferences": {
+    "title": "Cài đặt thông báo",
+    "description": "Quản lý cách thức và thời điểm bạn nhận được thông báo.",
+    "inApp": "Bật thông báo trong ứng dụng",
+    "verification": "Thông báo xác minh nội dung",
+    "verificationDesc": "Nhận thông báo khi các mục bạn tải lên được xem xét.",
+    "likes": "Thông báo lượt thích",
+    "likesDesc": "Nhận thông báo khi ai đó thích nội dung của bạn.",
+    "rewards": "Thông báo phần thưởng",
+    "rewardsDesc": "Nhận thông báo khi bạn kiếm được tín dụng từ các liên kết đã chia sẻ.",
+    "system": "Thông báo hệ thống",
+    "systemDesc": "Nhận các cập nhật nền tảng và thông báo bảo trì.",
+    "saved": "Đã lưu cài đặt thông báo.",
+    "comments": "Thông báo bình luận & phản hồi",
+    "commentsDesc": "Nhận thông báo khi có người bình luận bài đăng hoặc trả lời bình luận của bạn.",
+    "update-fail": "Không thể cập nhật tùy chọn thông báo"
+  },
+  "admin": {
+    "title": "Quản lý thông báo",
+    "description": "Soạn thảo và phát thông báo hệ thống đến người dùng.",
+    "target": "Đối tượng nhận",
+    "targetAll": "Tất cả người dùng (Phát rộng rãi)",
+    "targetUser": "Người dùng cụ thể",
+    "targetRole": "Vai trò cụ thể",
+    "targetIdPlaceholder": "Nhập ID người dùng hoặc ID vai trò",
+    "severity": "Mức độ",
+    "severityInfo": "Thông tin",
+    "severityWarning": "Cảnh báo",
+    "severityAlert": "Khẩn cấp",
+    "subject": "Tiêu đề",
+    "subjectPlaceholder": "Nhập tiêu đề thông báo...",
+    "message": "Nội dung",
+    "messagePlaceholder": "Viết nội dung thông báo...",
+    "link": "Liên kết hành động (Không bắt buộc)",
+    "linkPlaceholder": "/schematics/...",
+    "send": "Gửi thông báo",
+    "sending": "Đang phát thông báo...",
+    "sentSuccess": "Đã phát thông báo thành công!",
+    "livePreview": "Xem trước trực tiếp",
+    "history": "Lịch sử phát thông báo",
+    "noHistory": "Không tìm thấy lịch sử phát thông báo nào.",
+    "historyDate": "Ngày",
+    "historyTarget": "Đối tượng",
+    "historyTitle": "Tiêu đề",
+    "historyLink": "Liên kết",
+    "actions": "Hành động",
+    "delete": "Xóa thông báo",
+    "deleteSuccess": "Đã xóa thông báo thành công.",
+    "deleteConfirmTitle": "Xóa thông báo hệ thống?",
+    "deleteConfirmDesc": "Bạn có chắc chắn muốn xóa thông báo này không? Thông báo sẽ bị xóa vĩnh viễn khỏi hộp thư của tất cả người dùng và không thể khôi phục."
+  }
+}

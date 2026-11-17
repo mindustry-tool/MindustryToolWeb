@@ -1,0 +1,11 @@
+{
+  "provider": "Verbindungsanbieter",
+  "room": "Verbindungsraum",
+  "server": "Gameserver",
+  "map": "Karte",
+  "created-at": "Erstellt am",
+  "player": "Spieler",
+  "version": "Client-Version",
+  "locale": "Gebietsschema",
+  "mods": "Installierte Mods"
+}

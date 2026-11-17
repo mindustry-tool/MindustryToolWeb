@@ -1,0 +1,11 @@
+import { Module } from '@nestjs/common';
+import { MediaService } from './media.service';
+import { MediaController } from './media.controller';
+import { StorageModule } from '@/services/storage/storage.module';
+
+@Module({
+  imports: [StorageModule],
+  controllers: [MediaController],
+  providers: [MediaService],
+})
+export class MediaModule {}

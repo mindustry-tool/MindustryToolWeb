@@ -1,0 +1,122 @@
+{
+  "title": "알림",
+  "empty": "아직 알림이 없습니다",
+  "unread": "읽지 않음",
+  "all": "전체",
+  "markAllAsRead": "모두 읽음으로 표시",
+  "clearRead": "읽은 알림 삭제",
+  "viewAll": "모든 알림 보기",
+  "types": {
+    "VERIFICATION": "검수",
+    "LIKE": "좋아요",
+    "SHARE_REWARD": "보상",
+    "SYSTEM": "시스템",
+    "COMMENT": "댓글"
+  },
+  "categories": {
+    "personal": "개인",
+    "system": "시스템"
+  },
+  "unreadOnly": "읽지 않은 알림만",
+  "groupByEntity": "항목별 그룹화",
+  "emptyPersonal": "아직 개인 활동 알림이 없습니다.",
+  "emptySystem": "시스템 공지나 점검 안내가 없습니다.",
+  "allCaughtUp": "모두 확인했습니다! 새로운 알림이 없습니다.",
+  "codes": {
+    "verification": {
+      "approved": {
+        "title": "콘텐츠 승인됨",
+        "description": "회원님의 {{itemType}} \"{{itemName}}\" 검수가 완료되었습니다! {{credits}} 크레딧이 지급되었습니다."
+      },
+      "rejected": {
+        "title": "콘텐츠 거절됨",
+        "description": "회원님의 {{itemType}} \"{{itemName}}\" 등록이 거절되었습니다. 사유: {{reason}}"
+      }
+    },
+    "like": {
+      "single": {
+        "title": "새 좋아요",
+        "description": "{{actorName}}님이 회원님의 {{itemType}} \"{{itemName}}\"을(를) 좋아합니다."
+      },
+      "multiple": {
+        "title": "새로운 좋아요들",
+        "description": "{{actorName}}님 외 {{count}}명이 회원님의 {{itemType}} \"{{itemName}}\"을(를) 좋아합니다."
+      }
+    },
+    "share_reward": {
+      "title": "링크 공유 보상",
+      "description": "공유 링크에 방문자가 발생했습니다! {{credits}} 크레딧이 지급되었습니다."
+    },
+    "system": {
+      "announcement": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      },
+      "maintenance": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      }
+    },
+    "comment": {
+      "post": {
+        "title": "새 댓글",
+        "description": "{{actorName}}님이 회원님의 {{itemType}} \"{{itemName}}\"에 댓글을 남겼습니다."
+      },
+      "reply": {
+        "title": "새 답글",
+        "description": "{{actorName}}님이 \"{{itemName}}\"의 댓글에 답글을 남겼습니다."
+      }
+    }
+  },
+  "preferences": {
+    "title": "알림 설정",
+    "description": "인앱 알림 수신 방식과 조건을 관리합니다.",
+    "inApp": "인앱 알림 사용",
+    "verification": "콘텐츠 검수 알림",
+    "verificationDesc": "업로드한 항목의 검수 결과를 알림으로 받습니다.",
+    "likes": "좋아요 알림",
+    "likesDesc": "내 콘텐츠에 좋아요가 달렸을 때 알림을 받습니다.",
+    "rewards": "보상 알림",
+    "rewardsDesc": "공유 링크로 크레딧을 획득했을 때 알림을 받습니다.",
+    "system": "시스템 공지사항",
+    "systemDesc": "플랫폼 업데이트 및 점검 안내를 받습니다.",
+    "saved": "알림 설정이 저장되었습니다.",
+    "comments": "댓글 및 답글 알림",
+    "commentsDesc": "누군가 내 콘텐츠에 댓글을 달거나 내 댓글에 답글을 달 때 알림을 받습니다.",
+    "update-fail": "알림 설정을 업데이트하지 못했습니다"
+  },
+  "admin": {
+    "title": "알림 관리",
+    "description": "시스템 공지사항을 작성하고 사용자에게 발송합니다.",
+    "target": "발송 대상",
+    "targetAll": "모든 사용자 (전체 공지)",
+    "targetUser": "특정 사용자",
+    "targetRole": "특정 역할",
+    "targetIdPlaceholder": "사용자 ID 또는 역할 ID 입력",
+    "severity": "중요도",
+    "severityInfo": "정보",
+    "severityWarning": "경고",
+    "severityAlert": "긴급",
+    "subject": "제목",
+    "subjectPlaceholder": "공지 제목 입력...",
+    "message": "내용",
+    "messagePlaceholder": "공지 내용 작성...",
+    "link": "이동 링크 (선택)",
+    "linkPlaceholder": "/schematics/...",
+    "send": "공지 발송",
+    "sending": "발송 중...",
+    "sentSuccess": "공지가 성공적으로 발송되었습니다!",
+    "livePreview": "실시간 미리보기",
+    "history": "발송 내역",
+    "noHistory": "발송 내역이 없습니다.",
+    "historyDate": "날짜",
+    "historyTarget": "대상",
+    "historyTitle": "제목",
+    "historyLink": "링크",
+    "actions": "작업",
+    "delete": "공지 삭제",
+    "deleteSuccess": "공지가 성공적으로 삭제되었습니다.",
+    "deleteConfirmTitle": "시스템 공지를 삭제하시겠습니까?",
+    "deleteConfirmDesc": "이 공지를 삭제하시겠습니까? 모든 사용자의 수신함에서 영구적으로 삭제되며 복구할 수 없습니다."
+  }
+}

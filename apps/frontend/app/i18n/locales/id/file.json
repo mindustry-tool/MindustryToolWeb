@@ -1,0 +1,16 @@
+{
+  "empty": "Berkas kosong",
+  "create-new-folder": "Buat folder",
+  "create-new-file": "Buat berkas",
+  "delete": "Hapus berkas",
+  "create": "Buat berkas baru",
+  "download": "Unduh berkas",
+  "edit": "Sunting berkas",
+  "save": "Simpan perubahan",
+  "saving": "Menyimpan...",
+  "cancel": "Batal",
+  "saved": "File berhasil disimpan",
+  "save-error": "Gagal menyimpan file",
+  "downloading": "Mengunduh berkas...",
+  "downloaded": "Berkas berhasil diunduh"
+}

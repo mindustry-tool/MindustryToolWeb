@@ -1,0 +1,122 @@
+{
+  "title": "通知",
+  "empty": "暂无通知",
+  "unread": "未读",
+  "all": "全部",
+  "markAllAsRead": "全部标为已读",
+  "clearRead": "清除已读",
+  "viewAll": "查看所有通知",
+  "types": {
+    "VERIFICATION": "审核",
+    "LIKE": "点赞",
+    "SHARE_REWARD": "奖励",
+    "SYSTEM": "系统",
+    "COMMENT": "评论"
+  },
+  "categories": {
+    "personal": "个人",
+    "system": "系统"
+  },
+  "unreadOnly": "仅看未读",
+  "groupByEntity": "按项目分组",
+  "emptyPersonal": "您目前没有任何个人动态提醒。",
+  "emptySystem": "暂无系统公告或维护通知。",
+  "allCaughtUp": "您已阅览完毕！没有新的未读通知。",
+  "codes": {
+    "verification": {
+      "approved": {
+        "title": "内容已审核通过",
+        "description": "您的{{itemType}} “{{itemName}}” 已通过审核并发布！您获得了 {{credits}} 积分。"
+      },
+      "rejected": {
+        "title": "内容被拒绝",
+        "description": "您的{{itemType}} “{{itemName}}” 在审核中被拒绝。原因：{{reason}}"
+      }
+    },
+    "like": {
+      "single": {
+        "title": "新点赞",
+        "description": "{{actorName}} 赞了您的{{itemType}} “{{itemName}}”。"
+      },
+      "multiple": {
+        "title": "多个新点赞",
+        "description": "{{actorName}} 等 {{count}} 人赞了您的{{itemType}} “{{itemName}}”。"
+      }
+    },
+    "share_reward": {
+      "title": "分享奖励",
+      "description": "有人访问了您的分享链接！您获得了 {{credits}} 积分。"
+    },
+    "system": {
+      "announcement": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      },
+      "maintenance": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      }
+    },
+    "comment": {
+      "post": {
+        "title": "新评论",
+        "description": "{{actorName}} 评论了您的 {{itemType}} \"{{itemName}}\"。"
+      },
+      "reply": {
+        "title": "新回复",
+        "description": "{{actorName}} 回复了您在 \"{{itemName}}\" 上的评论。"
+      }
+    }
+  },
+  "preferences": {
+    "title": "通知设置",
+    "description": "管理您在应用内接收通知的方式与时机。",
+    "inApp": "启用应用内通知",
+    "verification": "内容审核提醒",
+    "verificationDesc": "在上传的物品被审核时接收提醒。",
+    "likes": "点赞通知",
+    "likesDesc": "当有人点赞您的内容时接收提醒。",
+    "rewards": "奖励通知",
+    "rewardsDesc": "当通过分享链接获得积分时接收提醒。",
+    "system": "系统公告",
+    "systemDesc": "接收平台更新与维护公告。",
+    "saved": "通知偏好设置已保存。",
+    "comments": "评论与回复通知",
+    "commentsDesc": "当有人评论您的内容或回复您的评论时接收提醒。",
+    "update-fail": "更新通知偏好设置失败"
+  },
+  "admin": {
+    "title": "通知管理",
+    "description": "编写并向用户广播系统公告。",
+    "target": "目标受众",
+    "targetAll": "全部用户 (广播)",
+    "targetUser": "指定用户",
+    "targetRole": "指定身份组",
+    "targetIdPlaceholder": "输入用户 ID 或身份组 ID",
+    "severity": "级别",
+    "severityInfo": "普通信息",
+    "severityWarning": "警告",
+    "severityAlert": "紧急提醒",
+    "subject": "标题",
+    "subjectPlaceholder": "输入公告标题...",
+    "message": "内容",
+    "messagePlaceholder": "输入公告正文...",
+    "link": "动作链接 (选填)",
+    "linkPlaceholder": "/schematics/...",
+    "send": "发送公告",
+    "sending": "正在广播...",
+    "sentSuccess": "公告已成功发布！",
+    "livePreview": "实时预览",
+    "history": "广播历史",
+    "noHistory": "暂无广播历史记录。",
+    "historyDate": "日期",
+    "historyTarget": "目标",
+    "historyTitle": "标题",
+    "historyLink": "链接",
+    "actions": "操作",
+    "delete": "删除公告",
+    "deleteSuccess": "公告已成功删除。",
+    "deleteConfirmTitle": "删除系统公告？",
+    "deleteConfirmDesc": "确定要删除此公告吗？它将从所有用户的收件箱中永久移除，且无法恢复。"
+  }
+}

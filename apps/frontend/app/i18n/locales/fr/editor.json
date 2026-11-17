@@ -1,0 +1,20 @@
+{
+  "add-row-after": "Ajouter une ligne après",
+  "add-row-before": "Ajouter une ligne avant",
+  "delete-column": "Supprimer la colone",
+  "merge-or-split": "Fusionner ou diviser",
+  "add-column-before": "Ajouter une colonne avant",
+  "delete-row": "Supprimer la ligne",
+  "go-to-next-cell": "Aller à la cellule suivante",
+  "merge-cells": "Fusionner les cellules",
+  "delete-table": "Supprimer la table",
+  "add-column-after": "Ajouter une colonne après",
+  "toggle-header-cell": "Afficher/masquer la cellule d'en-tête",
+  "go-to-previous-cell": "Aller à la cellule précédente",
+  "toggle-header-column": "Afficher/masquer la colonne d'en-tête",
+  "insert-table": "Insérer un tableau",
+  "toggle-header-row": "Afficher/masquer la ligne d'en-tête",
+  "fix-tables": "Corriger les tables",
+  "set-cell-attribute": "Modifier les attributs de la cellule",
+  "split-cell": "Diviser la cellule"
+}

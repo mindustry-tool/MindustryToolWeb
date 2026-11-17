@@ -1,0 +1,12 @@
+{
+  "login-to-mindustry": "Mindustryにログイン",
+  "return-to-app": "アプリに戻る",
+  "bad-login-link": "無効なログインリンク",
+  "login-success": "ログイン成功。このタブを閉じても構いません",
+  "token-expired": "トークンの有効期限が切れました。再度 /login してください",
+  "token-invalid": "トークンが無効であるか期限切れです",
+  "name": "名前:",
+  "login-btn": "ログイン",
+  "login-with-discord": "Discordでログイン",
+  "login-with-google": "Googleでログイン"
+}

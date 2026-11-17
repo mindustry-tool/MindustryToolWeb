@@ -1,0 +1,16 @@
+{
+  "new-post": "Nouveau post",
+  "title": "Titre",
+  "summary": "Description",
+  "cover": "Couverture",
+  "language": "Langue",
+  "status": "Statut",
+  "status-PUBLISHED": "Publié",
+  "select-cover": "Sélectionner une image de couverture",
+  "submitting": "Publication",
+  "submit-success": "Publication effectuée",
+  "browse-post": "Naviguer les posts",
+  "report": "Signaler",
+  "status-ARCHIVED": "Archivé",
+  "status-DRAFT": "Brouillon"
+}

@@ -1,0 +1,12 @@
+{
+  "login-to-mindustry": "Login to mindustry",
+  "return-to-app": "Return to app",
+  "bad-login-link": "Bad login link",
+  "login-success": "Login success, you can close this tab now",
+  "token-expired": "Token is expired, please /login again",
+  "token-invalid": "Invalid token or token expired",
+  "name": "Name:",
+  "login-btn": "Login",
+  "login-with-discord": "Login with Discord",
+  "login-with-google": "Login with Google"
+}

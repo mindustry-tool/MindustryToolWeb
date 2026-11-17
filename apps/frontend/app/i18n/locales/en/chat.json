@@ -1,0 +1,22 @@
+{
+  "online-users": "Online users",
+  "users": "Users",
+  "new-chat": "New Chat",
+  "thinking": "Thinking",
+  "channels": "Channels",
+  "online": "online",
+  "please-sign-in": "Please sign in to chat",
+  "your-message": "Your message",
+  "read-without-sign-in": "You can read messages without signing in",
+  "replying-to-message": "Replying to message",
+  "no-message-yet": "No message yet",
+  "disconnected": "Disconnected",
+  "nobody-online": "Nobody online",
+  "replying": "Replying",
+  "reply": "Reply",
+  "show-less": "Show less",
+  "show-more": "Show more",
+  "original-message-unavailable": "Original message unavailable",
+  "ask-anything": "Ask anything",
+  "delete-confirm": "Are you sure you want to delete this message?"
+}

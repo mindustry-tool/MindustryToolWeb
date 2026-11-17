@@ -1,0 +1,20 @@
+{
+  "add-row-after": "Tambahkan baris setelahnya",
+  "add-row-before": "Tambahkan baris sebelumnya",
+  "delete-column": "Hapus kolom",
+  "merge-or-split": "Gabungkan atau pisahkan",
+  "add-column-before": "Tambahkan kolom sebelumnya",
+  "delete-row": "Hapus baris",
+  "go-to-next-cell": "Lanjut ke sel berikutnya",
+  "merge-cells": "Gabungkan sel",
+  "delete-table": "Hapus tabel",
+  "add-column-after": "Tambahkan kolom setelahnya",
+  "toggle-header-cell": "Alihkan sel bagian atas",
+  "go-to-previous-cell": "Kembali ke sel sebelumnya",
+  "toggle-header-column": "Alihkan kolom bagian atas",
+  "insert-table": "Sisipkan tabel",
+  "toggle-header-row": "Alihkan baris bagian atas",
+  "fix-tables": "Perbaiki tabel",
+  "set-cell-attribute": "Atur atribut sel",
+  "split-cell": "Sel terpisah"
+}

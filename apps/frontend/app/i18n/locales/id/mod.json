@@ -1,0 +1,23 @@
+{
+  "installed": "Mod terpasang",
+  "download": "Unduh mod",
+  "install": "Instal mod",
+  "delete": "Hapus mod",
+  "title": "Mod",
+  "nsfw-warning": "Peringatan Konten 18+",
+  "more-topics": "+{{count}} lainnya",
+  "no-mod-found": "Mod tidak ditemukan",
+  "hidden-badge": "Tersembunyi",
+  "json-badge": "JSON",
+  "default-badge": "Bawaan",
+  "import-mod": "Impor Mod",
+  "import-description": "Masukkan URL mod yang ingin Anda impor. Mod harus berupa repositori GitHub dengan rilis.",
+  "import-url-placeholder": "Masukkan URL mod",
+  "import-url-title": "Masukkan URL repositori GitHub yang valid",
+  "import-invalid-url": "URL repositori GitHub tidak valid",
+  "select": "Pilih",
+  "no-release": "Tidak ada rilis",
+  "release-draft": "Draf",
+  "release-pre-release": "Pra-rilis",
+  "downloads": "unduhan"
+}

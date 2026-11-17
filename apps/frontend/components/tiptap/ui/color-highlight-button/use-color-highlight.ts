@@ -1,0 +1,229 @@
+import type { Editor } from '@tiptap/react';
+import * as React from 'react';
+import { useHotkeys } from 'react-hotkeys-hook';
+
+// --- Icons ---
+import { HighlighterIcon } from '@/components/icons/highlighter-icon';
+import { useIsMobile } from '@/hooks/use-mobile';
+
+// --- Hooks ---
+import { useTiptapEditor } from '@/hooks/use-tiptap-editor';
+
+// --- Lib ---
+import { isMarkInSchema, isNodeTypeSelected } from '@/lib/tiptap-utils';
+
+export const COLOR_HIGHLIGHT_SHORTCUT_KEY = 'mod+shift+h';
+export const HIGHLIGHT_COLORS = [
+	{
+		label: 'Default background',
+		value: 'var(--color-highlight-default)',
+		border: 'var(--color-highlight-default-border)',
+	},
+	{
+		label: 'Gray background',
+		value: 'var(--color-highlight-gray)',
+		border: 'var(--color-highlight-gray-border)',
+	},
+	{
+		label: 'Brown background',
+		value: 'var(--color-highlight-brown)',
+		border: 'var(--color-highlight-brown-border)',
+	},
+	{
+		label: 'Orange background',
+		value: 'var(--color-highlight-orange)',
+		border: 'var(--color-highlight-orange-border)',
+	},
+	{
+		label: 'Yellow background',
+		value: 'var(--color-highlight-yellow)',
+		border: 'var(--color-highlight-yellow-border)',
+	},
+	{
+		label: 'Green background',
+		value: 'var(--color-highlight-green)',
+		border: 'var(--color-highlight-green-border)',
+	},
+	{
+		label: 'Blue background',
+		value: 'var(--color-highlight-blue)',
+		border: 'var(--color-highlight-blue-border)',
+	},
+	{
+		label: 'Purple background',
+		value: 'var(--color-highlight-purple)',
+		border: 'var(--color-highlight-purple-border)',
+	},
+	{
+		label: 'Pink background',
+		value: 'var(--color-highlight-pink)',
+		border: 'var(--color-highlight-pink-border)',
+	},
+	{
+		label: 'Red background',
+		value: 'var(--color-highlight-red)',
+		border: 'var(--color-highlight-red-border)',
+	},
+];
+export type HighlightColor = (typeof HIGHLIGHT_COLORS)[number];
+
+/**
+ * Configuration for the color highlight functionality
+ */
+export type UseColorHighlightConfig = {
+	/**
+	 * The Tiptap editor instance.
+	 */
+	editor?: Editor | null;
+	/**
+	 * The color to apply when toggling the highlight.
+	 */
+	highlightColor?: string;
+	/**
+	 * Optional label to display alongside the icon.
+	 */
+	label?: string;
+	/**
+	 * Whether the button should hide when the mark is not available.
+	 * @default false
+	 */
+	hideWhenUnavailable?: boolean;
+	/**
+	 * Called when the highlight is applied.
+	 */
+	onApplied?: ({ color, label }: { color: string; label: string }) => void;
+};
+
+export function pickHighlightColorsByValue() {
+	const colorMap = new Map(HIGHLIGHT_COLORS.map((color) => [color.value, color]));
+
+	return [...colorMap.values()] as HighlightColor[];
+}
+
+export function canColorHighlight(editor: Editor | null): boolean {
+	if (!editor || !editor.isEditable) {
+		return false;
+	}
+	if (!isMarkInSchema('highlight', editor) || isNodeTypeSelected(editor, ['image'])) {
+		return false;
+	}
+
+	return editor.can().setMark('highlight');
+}
+
+export function isColorHighlightActive(editor: Editor | null, highlightColor?: string): boolean {
+	if (!editor || !editor.isEditable) {
+		return false;
+	}
+	return highlightColor ? editor.isActive('highlight', { color: highlightColor }) : editor.isActive('highlight');
+}
+
+export function removeHighlight(editor: Editor | null): boolean {
+	if (!editor || !editor.isEditable) {
+		return false;
+	}
+	if (!canColorHighlight(editor)) {
+		return false;
+	}
+
+	return editor.chain().focus().unsetMark('highlight').run();
+}
+
+export function shouldShowButton(props: { editor: Editor | null; hideWhenUnavailable: boolean }): boolean {
+	const { editor, hideWhenUnavailable } = props;
+
+	if (!editor || !editor.isEditable) {
+		return false;
+	}
+	if (!isMarkInSchema('highlight', editor)) {
+		return false;
+	}
+
+	if (hideWhenUnavailable && !editor.isActive('code')) {
+		return canColorHighlight(editor);
+	}
+
+	return true;
+}
+
+export function useColorHighlight(config: UseColorHighlightConfig) {
+	const { editor: providedEditor, label, highlightColor, hideWhenUnavailable = false, onApplied } = config;
+
+	const { editor } = useTiptapEditor(providedEditor);
+	const isMobile = useIsMobile();
+	const [isVisible, setIsVisible] = React.useState<boolean>(true);
+	const canColorHighlightState = canColorHighlight(editor);
+	const isActive = isColorHighlightActive(editor, highlightColor);
+
+	React.useEffect(() => {
+		if (!editor) {
+			return;
+		}
+
+		const handleSelectionUpdate = () => {
+			setIsVisible(shouldShowButton({ editor, hideWhenUnavailable }));
+		};
+
+		handleSelectionUpdate();
+
+		editor.on('selectionUpdate', handleSelectionUpdate);
+
+		return () => {
+			editor.off('selectionUpdate', handleSelectionUpdate);
+		};
+	}, [editor, hideWhenUnavailable]);
+
+	const handleColorHighlight = React.useCallback(() => {
+		if (!editor || !canColorHighlightState || !highlightColor || !label) {
+			return false;
+		}
+
+		if (editor.state.storedMarks) {
+			const highlightMarkType = editor.schema.marks.highlight;
+			if (highlightMarkType) {
+				editor.view.dispatch(editor.state.tr.removeStoredMark(highlightMarkType));
+			}
+		}
+
+		setTimeout(() => {
+			const success = editor.chain().focus().toggleMark('highlight', { color: highlightColor }).run();
+			if (success) {
+				onApplied?.({ color: highlightColor, label });
+			}
+			return success;
+		}, 0);
+		return undefined;
+	}, [canColorHighlightState, highlightColor, editor, label, onApplied]);
+
+	const handleRemoveHighlight = React.useCallback(() => {
+		const success = removeHighlight(editor);
+		if (success) {
+			onApplied?.({ color: '', label: 'Remove highlight' });
+		}
+		return success;
+	}, [editor, onApplied]);
+
+	useHotkeys(
+		COLOR_HIGHLIGHT_SHORTCUT_KEY,
+		(event) => {
+			event.preventDefault();
+			handleColorHighlight();
+		},
+		{
+			enabled: isVisible && canColorHighlightState,
+			enableOnContentEditable: !isMobile,
+			enableOnFormTags: true,
+		},
+	);
+
+	return {
+		isVisible,
+		isActive,
+		handleColorHighlight,
+		handleRemoveHighlight,
+		canColorHighlight: canColorHighlightState,
+		label: label || `Highlight`,
+		shortcutKeys: COLOR_HIGHLIGHT_SHORTCUT_KEY,
+		Icon: HighlighterIcon,
+	};
+}

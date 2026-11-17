@@ -1,0 +1,31 @@
+# Nestjs specific
+/dist
+/build
+/tmp
+
+build
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# dotenv environment variable files
+.env
+
+# temp directory
+.temp
+.tmp
+.turbo
+
+node_modules
+dist
+build
+analyze
+upload-data
+apps/frontend/.env.development
+archive/

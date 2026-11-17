@@ -1,0 +1,25 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    },
+    {
+      "directory": "apps/frontend",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "apps/backend",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "apps/discord-bot",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/api",
+      "changeProcessCWD": true
+    }
+  ],
+  "eslint.useFlatConfig": true,
+  "js/ts.experimental.useTsgo": true
+}

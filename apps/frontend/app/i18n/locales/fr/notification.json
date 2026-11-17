@@ -1,0 +1,122 @@
+{
+  "title": "Mes notifications",
+  "empty": "Aucune notification pour le moment",
+  "unread": "Non lu",
+  "all": "Tout",
+  "markAllAsRead": "Tout marquer comme lu",
+  "clearRead": "Effacer les lus",
+  "viewAll": "Voir toutes les notifications",
+  "types": {
+    "VERIFICATION": "Vérification",
+    "LIKE": "J'aime",
+    "SHARE_REWARD": "Récompenses",
+    "SYSTEM": "Système",
+    "COMMENT": "Commentaires"
+  },
+  "categories": {
+    "personal": "Personnel",
+    "system": "Système"
+  },
+  "unreadOnly": "Non lus uniquement",
+  "groupByEntity": "Grouper par élément",
+  "emptyPersonal": "Vous n'avez pas encore d'alertes personnelles.",
+  "emptySystem": "Aucune annonce système ou avis de maintenance.",
+  "allCaughtUp": "Vous êtes à jour ! Aucune notification non lue.",
+  "codes": {
+    "verification": {
+      "approved": {
+        "title": "Contenu approuvé",
+        "description": "Votre {{itemType}} \"{{itemName}}\" a été vérifié et approuvé ! Vous avez gagné {{credits}} crédits."
+      },
+      "rejected": {
+        "title": "Contenu refusé",
+        "description": "Votre {{itemType}} \"{{itemName}}\" a été rejeté lors de l'examen. {{reason}}"
+      }
+    },
+    "like": {
+      "single": {
+        "title": "Nouveau j'aime",
+        "description": "{{actorName}} a aimé votre {{itemType}} \"{{itemName}}\"."
+      },
+      "multiple": {
+        "title": "Nouveaux j'aime",
+        "description": "{{actorName}} et {{count}} autres personnes ont aimé votre {{itemType}} \"{{itemName}}\"."
+      }
+    },
+    "share_reward": {
+      "title": "Récompense de lien partagé",
+      "description": "Votre lien partagé a été visité ! Vous avez reçu {{credits}} crédits."
+    },
+    "system": {
+      "announcement": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      },
+      "maintenance": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      }
+    },
+    "comment": {
+      "post": {
+        "title": "Nouveau commentaire",
+        "description": "{{actorName}} a commenté votre {{itemType}} \"{{itemName}}\"."
+      },
+      "reply": {
+        "title": "Nouvelle réponse",
+        "description": "{{actorName}} a répondu à votre commentaire sur \"{{itemName}}\"."
+      }
+    }
+  },
+  "preferences": {
+    "title": "Paramètres des notifications",
+    "description": "Gérez la manière et le moment de réception des alertes.",
+    "inApp": "Activer les notifications dans l'application",
+    "verification": "Alertes de vérification de contenu",
+    "verificationDesc": "Recevoir des notifications lorsque vos éléments sont examinés.",
+    "likes": "Notifications de mentions j'aime",
+    "likesDesc": "Recevoir des notifications lorsque quelqu'un aime votre contenu.",
+    "rewards": "Notifications de récompenses",
+    "rewardsDesc": "Recevoir des alertes lorsque vous gagnez des crédits via des liens.",
+    "system": "Annonces système",
+    "systemDesc": "Recevoir les mises à jour et avis de maintenance.",
+    "saved": "Préférences de notifications enregistrées.",
+    "comments": "Notifications de commentaires et réponses",
+    "commentsDesc": "Recevez des alertes lorsque quelqu'un commente votre contenu ou répond à vos commentaires.",
+    "update-fail": "Échec de la mise à jour des préférences de notification"
+  },
+  "admin": {
+    "title": "Gestion des notifications",
+    "description": "Rédiger et diffuser des annonces système aux utilisateurs.",
+    "target": "Public cible",
+    "targetAll": "Tous les utilisateurs (Diffusion)",
+    "targetUser": "Utilisateur spécifique",
+    "targetRole": "Rôle spécifique",
+    "targetIdPlaceholder": "Entrez l'ID utilisateur ou l'ID de rôle",
+    "severity": "Gravité",
+    "severityInfo": "Information générale",
+    "severityWarning": "Avertissement",
+    "severityAlert": "Alerte",
+    "subject": "Titre",
+    "subjectPlaceholder": "Entrez le titre de l'annonce...",
+    "message": "Corps du message",
+    "messagePlaceholder": "Rédigez le message de l'annonce...",
+    "link": "Lien d'action (optionnel)",
+    "linkPlaceholder": "/schematics/...",
+    "send": "Diffuser l'annonce",
+    "sending": "Diffusion en cours...",
+    "sentSuccess": "Annonce diffusée avec succès !",
+    "livePreview": "Aperçu en direct",
+    "history": "Historique de diffusion",
+    "noHistory": "Aucun historique de diffusion trouvé.",
+    "historyDate": "Date d'envoi",
+    "historyTarget": "Cible",
+    "historyTitle": "Titre",
+    "historyLink": "Lien",
+    "actions": "Actions administratives",
+    "delete": "Supprimer l'annonce",
+    "deleteSuccess": "Annonce supprimée avec succès.",
+    "deleteConfirmTitle": "Supprimer l'annonce système ?",
+    "deleteConfirmDesc": "Voulez-vous vraiment supprimer cette annonce ? Elle sera définitivement supprimée de la boîte de réception de tous les utilisateurs et ne pourra pas être récupérée."
+  }
+}

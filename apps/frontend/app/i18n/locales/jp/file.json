@@ -1,0 +1,16 @@
+{
+  "empty": "空のファイル",
+  "create-new-folder": "フォルダを作成",
+  "create-new-file": "ファイルを作成",
+  "delete": "ファイルを削除",
+  "create": "新しいファイルを作成",
+  "download": "ファイルをダウンロード",
+  "edit": "編集",
+  "save": "変更を保存",
+  "saving": "保存中...",
+  "cancel": "キャンセル",
+  "saved": "ファイルが正常に保存されました",
+  "save-error": "ファイルの保存に失敗しました",
+  "downloading": "ファイルをダウンロード中...",
+  "downloaded": "ファイルのダウンロードが完了しました"
+}

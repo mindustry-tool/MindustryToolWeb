@@ -1,0 +1,11 @@
+{
+  "provider": "连接提供商",
+  "room": "连接房间",
+  "server": "服务器",
+  "map": "地图",
+  "created-at": "创建时间",
+  "player": "玩家",
+  "version": "版本",
+  "locale": "语言区域",
+  "mods": "模组"
+}

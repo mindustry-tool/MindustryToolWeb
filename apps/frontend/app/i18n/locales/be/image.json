@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "Воблака",
+  "upload-from-local": "Лакальна",
+  "upload-from-shared": "Спільная бібліятэка",
+  "upload-fail": "Памылка загрузкі",
+  "update": "Абнавіць",
+  "create-folder": "Стварыць папку",
+  "model": "Мадэль",
+  "settings": "Налады",
+  "aspect-ratio": "Суадносіны бакоў",
+  "resolution": "Разрозненне",
+  "guidance": "Сіла падказкі (CFG)",
+  "steps": "Крокі",
+  "prompt": "Промпт",
+  "prompt-placeholder": "Апішыце ваш малюнак...",
+  "generate": "Згенераваць"
+}

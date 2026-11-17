@@ -1,0 +1,22 @@
+{
+  "online-users": "Utilisateurs en ligne",
+  "users": "Utilisateurs",
+  "new-chat": "Nouvelle conversation",
+  "thinking": "Réflexion en cours...",
+  "channels": "Canaux",
+  "online": "En ligne",
+  "please-sign-in": "Veuillez vous connecter pour discuter",
+  "your-message": "Votre message",
+  "read-without-sign-in": "Vous pouvez lire les messages sans vous connecter",
+  "replying-to-message": "Réponse au message",
+  "no-message-yet": "Aucun message pour le moment",
+  "disconnected": "Déconnecté",
+  "nobody-online": "Personne en ligne",
+  "replying": "En cours de réponse",
+  "reply": "Répondre",
+  "show-less": "Afficher moins",
+  "show-more": "Afficher plus",
+  "original-message-unavailable": "Message d'origine indisponible",
+  "ask-anything": "Posez n'importe quelle question...",
+  "delete-confirm": "Êtes-vous sûr de vouloir supprimer ce message ?"
+}

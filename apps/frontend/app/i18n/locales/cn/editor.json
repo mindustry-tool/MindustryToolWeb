@@ -1,0 +1,20 @@
+{
+  "add-row-after": "添加行于后",
+  "add-row-before": "添加行于前",
+  "delete-column": "删除列",
+  "merge-or-split": "合并或分开",
+  "add-column-before": "添加列于前",
+  "delete-row": "删除行",
+  "go-to-next-cell": "转到下一个单元格",
+  "merge-cells": "合并单元格",
+  "delete-table": "删除表格",
+  "add-column-after": "添加列于后",
+  "toggle-header-cell": "切换标题单元格",
+  "go-to-previous-cell": "返回上一单元格",
+  "toggle-header-column": "切换标题列",
+  "insert-table": "插入表格",
+  "toggle-header-row": "切换标题行",
+  "fix-tables": "固定表格",
+  "set-cell-attribute": "设置单元格属性",
+  "split-cell": "分开单元格"
+}

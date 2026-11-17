@@ -1,0 +1,23 @@
+{
+  "installed": "Усталяваныя моды",
+  "download": "Спампаваць моды",
+  "install": "Усталяваць мод",
+  "delete": "Выдаліць мод",
+  "title": "Моды",
+  "nsfw-warning": "Папярэджанне: кантэнт 18+",
+  "more-topics": "яшчэ +{{count}}",
+  "no-mod-found": "Мод не знойдзены",
+  "hidden-badge": "Схаваны",
+  "json-badge": "JSON",
+  "default-badge": "Па змаўчанні",
+  "import-mod": "Імпартаваць мод",
+  "import-description": "Увядзіце URL мода, які хочаце імпартаваць. Мод павінен быць рэпазіторыем GitHub з рэлізам.",
+  "import-url-placeholder": "Увядзіце URL мода",
+  "import-url-title": "Увядзіце карэктны URL рэпазіторыя GitHub",
+  "import-invalid-url": "Нядзейсны URL рэпазіторыя GitHub",
+  "select": "Выбраць",
+  "no-release": "Няма рэлізу",
+  "release-draft": "Чарнавік",
+  "release-pre-release": "Прэ-рэліз",
+  "downloads": "спамповак"
+}

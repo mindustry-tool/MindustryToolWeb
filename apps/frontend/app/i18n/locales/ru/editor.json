@@ -1,0 +1,20 @@
+{
+  "add-row-after": "Добавить строку снизу",
+  "add-row-before": "Добавить строку сверху",
+  "delete-column": "Удалить столбец",
+  "merge-or-split": "Объединить или разделить",
+  "add-column-before": "Добавить столбец слева",
+  "delete-row": "Удалить строку",
+  "go-to-next-cell": "Перейти к следующей ячейке",
+  "merge-cells": "Объединить ячейки",
+  "delete-table": "Удалить таблицу",
+  "add-column-after": "Добавить столбец справа",
+  "toggle-header-cell": "Переключить ячейку заголовка",
+  "go-to-previous-cell": "Перейти к предыдущей ячейке",
+  "toggle-header-column": "Переключить столбец заголовка",
+  "insert-table": "Вставить таблицу",
+  "toggle-header-row": "Переключить строку заголовка",
+  "fix-tables": "Исправить таблицы",
+  "set-cell-attribute": "Задать атрибут ячейки",
+  "split-cell": "Разделить ячейку"
+}

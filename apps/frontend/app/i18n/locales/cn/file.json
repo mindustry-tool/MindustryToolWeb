@@ -1,0 +1,16 @@
+{
+  "empty": "空文件",
+  "create-new-folder": "新建文件夹",
+  "create-new-file": "新建文件",
+  "delete": "删除文件",
+  "create": "创建新文件",
+  "download": "下载文件",
+  "edit": "编辑文件",
+  "save": "保存更改",
+  "saving": "保存中...",
+  "cancel": "取消",
+  "saved": "文件保存成功",
+  "save-error": "文件保存失败",
+  "downloading": "正在下载文件...",
+  "downloaded": "文件下载成功"
+}

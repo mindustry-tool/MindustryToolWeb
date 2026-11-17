@@ -1,0 +1,12 @@
+{
+  "remove-link-description": "Hapus tautan postingan ini",
+  "remove-link": "Hapus tautan",
+  "link": "Tautan wiki",
+  "link-description": "Menghubungkan halaman Wiki ke sebuah postingan",
+  "path": "Jalur",
+  "create-description": "Buat halaman wiki baru",
+  "edit-description": "Edit halaman wiki",
+  "delete-description": "Hapus catatan ini",
+  "home": "Beranda",
+  "nothing-there-yet": "Belum ada konten di sini, silakan pilih bahasa lain"
+}

@@ -1,0 +1,16 @@
+{
+  "new-post": "New post",
+  "title": "Title",
+  "summary": "Summary",
+  "cover": "Cover",
+  "language": "Language",
+  "status": "Status",
+  "status-PUBLISHED": "PUBLISHED",
+  "select-cover": "Select cover image",
+  "submitting": "Submitting",
+  "submit-success": "Submit successful",
+  "browse-post": "Browse post",
+  "report": "Report",
+  "status-ARCHIVED": "Archived",
+  "status-DRAFT": "Draft"
+}

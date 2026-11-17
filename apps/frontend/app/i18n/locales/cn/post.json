@@ -1,0 +1,16 @@
+{
+  "new-post": "新建文章",
+  "title": "标题",
+  "summary": "摘要",
+  "cover": "封面",
+  "language": "语言",
+  "status": "状态",
+  "status-PUBLISHED": "已发布",
+  "select-cover": "选择封面图片",
+  "submitting": "提交中",
+  "submit-success": "成功提交",
+  "browse-post": "浏览文章",
+  "report": "举报",
+  "status-ARCHIVED": "归档",
+  "status-DRAFT": "草拟"
+}

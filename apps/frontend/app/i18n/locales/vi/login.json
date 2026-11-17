@@ -1,0 +1,12 @@
+{
+  "login-to-mindustry": "Đăng nhập vào Mindustry",
+  "return-to-app": "Quay lại ứng dụng",
+  "bad-login-link": "Liên kết đăng nhập sai",
+  "login-success": "Đăng nhập thành công, bạn có thể đóng thẻ này",
+  "token-expired": "Mã thông báo đã hết hạn, vui lòng /login lại",
+  "token-invalid": "Mã thông báo không hợp lệ hoặc đã hết hạn",
+  "name": "Tên:",
+  "login-btn": "Đăng nhập",
+  "login-with-discord": "Đăng nhập bằng Discord",
+  "login-with-google": "Đăng nhập bằng Google"
+}

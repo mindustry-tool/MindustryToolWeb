@@ -1,0 +1,16 @@
+{
+  "new-post": "Новы допіс",
+  "title": "Загаловак",
+  "summary": "Кароткае апісанне",
+  "cover": "Вокладка",
+  "language": "Мова",
+  "status": "Статус",
+  "status-PUBLISHED": "Апублікавана",
+  "select-cover": "Выбраць выяву вокладкі",
+  "submitting": "Адпраўка...",
+  "submit-success": "Успешна адпраўлена",
+  "browse-post": "Прагляд допісу",
+  "report": "Паскардзіцца",
+  "status-ARCHIVED": "У архіве",
+  "status-DRAFT": "Чарнавік"
+}

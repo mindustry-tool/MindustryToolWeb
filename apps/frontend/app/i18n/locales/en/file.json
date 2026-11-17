@@ -1,0 +1,16 @@
+{
+  "empty": "Empty file",
+  "create-new-folder": "Create folder",
+  "create-new-file": "Create file",
+  "delete": "Delete file",
+  "create": "Create new file",
+  "download": "Download file",
+  "edit": "Edit file",
+  "save": "Save changes",
+  "saving": "Saving...",
+  "cancel": "Cancel",
+  "saved": "File saved successfully",
+  "save-error": "Failed to save file",
+  "downloading": "Downloading file...",
+  "downloaded": "File downloaded successfully"
+}

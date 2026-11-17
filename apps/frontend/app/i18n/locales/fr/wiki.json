@@ -1,0 +1,12 @@
+{
+  "remove-link-description": "Délier ce post",
+  "remove-link": "Retirer le lien",
+  "link": "Lier un wiki",
+  "link-description": "Lie une page wiki à un post",
+  "path": "Chemin",
+  "create-description": "Créer une nouvelle page wiki",
+  "edit-description": "Éditer la page wiki",
+  "delete-description": "Supprimer la page",
+  "home": "Accueil",
+  "nothing-there-yet": "Il n'y a encore rien ici, veuillez choisir une autre langue"
+}

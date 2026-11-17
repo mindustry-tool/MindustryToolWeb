@@ -1,0 +1,48 @@
+{
+    "name": "mindustry-tool-web",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "packageManager": "pnpm@11.25.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "turbo lint",
+        "build": "turbo build",
+        "check-types": "turbo check-types",
+        "check:cycles": "node scripts/check-cycles.cjs",
+        "preinstall": "npx only-allow pnpm",
+        "i18n:status": "node scripts/i18n.mjs status",
+        "i18n:pull": "node scripts/i18n.mjs pull",
+        "i18n:push": "node scripts/i18n.mjs push"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ],
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.3.3",
+        "@eslint/js": "^9.39.1",
+        "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+        "dpdm": "^4.3.0",
+        "eslint": "^9.39.1",
+        "eslint-config-next": "^16.3.4",
+        "eslint-plugin-import-zod": "^1.2.1",
+        "eslint-plugin-prettier": "^5.5.4",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^7.0.1",
+        "eslint-plugin-react-refresh": "^0.4.24",
+        "eslint-plugin-tailwind-canonical-classes": "^1.4.1",
+        "eslint-plugin-tailwindcss": "4.0.0-beta.0",
+        "eslint-plugin-unused-imports": "^4.4.1",
+        "globals": "^16.5.0",
+        "prettier": "^3.7.4",
+        "prettier-plugin-tailwindcss": "^0.6.14",
+        "tsup": "^8.5.1",
+        "turbo": "^2.9.12",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.48.1"
+    }
+}

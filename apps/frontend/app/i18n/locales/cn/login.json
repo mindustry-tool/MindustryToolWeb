@@ -1,0 +1,12 @@
+{
+  "login-to-mindustry": "登录 Mindustry Tool",
+  "return-to-app": "返回应用程序",
+  "bad-login-link": "无效的登录链接",
+  "login-success": "登录成功，您现在可以关闭此标签页",
+  "token-expired": "令牌已过期，请重新 /login",
+  "token-invalid": "令牌无效或已过期",
+  "name": "名称：",
+  "login-btn": "登录",
+  "login-with-discord": "使用 Discord 登录",
+  "login-with-google": "使用 Google 登录"
+}

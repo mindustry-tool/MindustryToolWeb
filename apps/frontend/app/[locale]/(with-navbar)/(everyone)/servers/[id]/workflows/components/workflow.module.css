@@ -1,0 +1,22 @@
+.react_flow {
+	height: 100%;
+}
+
+.react-flow__panel {
+	background-color: white;
+	color: black;
+}
+
+.react-flow__handle {
+	width: 1rem;
+	height: 1rem;
+}
+
+.react-flow__minimap {
+	border: 1px solid #e5e7eb;
+	color: black;
+}
+
+.react-flow__edge-path {
+	stroke-width: 2;
+}

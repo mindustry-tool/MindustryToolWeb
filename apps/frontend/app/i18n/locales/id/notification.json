@@ -1,0 +1,122 @@
+{
+  "title": "Notifikasi",
+  "empty": "Belum ada notifikasi",
+  "unread": "Belum dibaca",
+  "all": "Semua",
+  "markAllAsRead": "Tandai semua telah dibaca",
+  "clearRead": "Hapus yang sudah dibaca",
+  "viewAll": "Lihat semua notifikasi",
+  "types": {
+    "VERIFICATION": "Verifikasi",
+    "LIKE": "Suka",
+    "SHARE_REWARD": "Hadiah",
+    "SYSTEM": "Sistem",
+    "COMMENT": "Komentar"
+  },
+  "categories": {
+    "personal": "Pribadi",
+    "system": "Sistem"
+  },
+  "unreadOnly": "Hanya yang belum dibaca",
+  "groupByEntity": "Kelompokkan berdasarkan entitas",
+  "emptyPersonal": "Anda belum memiliki pemberitahuan aktivitas pribadi.",
+  "emptySystem": "Tidak ada pengumuman sistem atau pemeliharaan.",
+  "allCaughtUp": "Semua telah diperbarui! Tidak ada notifikasi yang belum dibaca.",
+  "codes": {
+    "verification": {
+      "approved": {
+        "title": "Konten Disetujui",
+        "description": "{{itemType}} \"{{itemName}}\" Anda telah diverifikasi dan disetujui! Anda mendapatkan {{credits}} kredit."
+      },
+      "rejected": {
+        "title": "Konten Ditolak",
+        "description": "{{itemType}} \"{{itemName}}\" Anda ditolak selama peninjauan. {{reason}}"
+      }
+    },
+    "like": {
+      "single": {
+        "title": "Suka Baru",
+        "description": "{{actorName}} menyukai {{itemType}} \"{{itemName}}\" Anda."
+      },
+      "multiple": {
+        "title": "Suka Baru",
+        "description": "{{actorName}} dan {{count}} orang lainnya menyukai {{itemType}} \"{{itemName}}\" Anda."
+      }
+    },
+    "share_reward": {
+      "title": "Hadiah Tautan Berbagi",
+      "description": "Tautan yang Anda bagikan telah dikunjungi! Anda menerima {{credits}} kredit."
+    },
+    "system": {
+      "announcement": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      },
+      "maintenance": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      }
+    },
+    "comment": {
+      "post": {
+        "title": "Komentar Baru",
+        "description": "{{actorName}} mengomentari {{itemType}} \"{{itemName}}\" Anda."
+      },
+      "reply": {
+        "title": "Balasan Baru",
+        "description": "{{actorName}} membalas komentar Anda di \"{{itemName}}\"."
+      }
+    }
+  },
+  "preferences": {
+    "title": "Pengaturan Notifikasi",
+    "description": "Kelola cara dan waktu Anda menerima pemberitahuan aplikasi.",
+    "inApp": "Aktifkan Notifikasi Dalam Aplikasi",
+    "verification": "Pemberitahuan Verifikasi Konten",
+    "verificationDesc": "Terima notifikasi saat item yang Anda unggah ditinjau.",
+    "likes": "Notifikasi Suka",
+    "likesDesc": "Terima notifikasi saat seseorang menyukai konten Anda.",
+    "rewards": "Notifikasi Hadiah",
+    "rewardsDesc": "Terima pemberitahuan saat Anda mendapatkan kredit dari tautan.",
+    "system": "Pengumuman Sistem",
+    "systemDesc": "Terima pembaruan platform dan pemberitahuan pemeliharaan.",
+    "saved": "Preferensi notifikasi disimpan.",
+    "comments": "Notifikasi Komentar & Balasan",
+    "commentsDesc": "Terima peringatan saat seseorang mengomentari konten Anda atau membalas komentar Anda.",
+    "update-fail": "Gagal memperbarui preferensi notifikasi"
+  },
+  "admin": {
+    "title": "Manajemen Notifikasi",
+    "description": "Tulis dan siarkan pengumuman sistem ke pengguna.",
+    "target": "Target Audiens",
+    "targetAll": "Semua Pengguna (Siaran)",
+    "targetUser": "Pengguna Tertentu",
+    "targetRole": "Peran Tertentu",
+    "targetIdPlaceholder": "Masukkan ID pengguna atau ID peran",
+    "severity": "Tingkat Keparahan",
+    "severityInfo": "Informasi",
+    "severityWarning": "Peringatan",
+    "severityAlert": "Darurat",
+    "subject": "Judul",
+    "subjectPlaceholder": "Masukkan judul pengumuman...",
+    "message": "Pesan",
+    "messagePlaceholder": "Tulis pesan pengumuman...",
+    "link": "Tautan Tindakan (Opsional)",
+    "linkPlaceholder": "/schematics/...",
+    "send": "Kirim Pengumuman",
+    "sending": "Menyiarkan...",
+    "sentSuccess": "Pengumuman berhasil disiarkan!",
+    "livePreview": "Pratinjau Langsung",
+    "history": "Riwayat Siaran",
+    "noHistory": "Tidak ada riwayat siaran ditemukan.",
+    "historyDate": "Tanggal",
+    "historyTarget": "Target Sasaran",
+    "historyTitle": "Judul",
+    "historyLink": "Tautan",
+    "actions": "Tindakan",
+    "delete": "Hapus Pengumuman",
+    "deleteSuccess": "Pengumuman berhasil dihapus.",
+    "deleteConfirmTitle": "Hapus Pengumuman Sistem?",
+    "deleteConfirmDesc": "Apakah Anda yakin ingin menghapus pengumuman ini? Ini akan dihapus secara permanen dari kotak masuk semua pengguna dan tidak dapat dipulihkan."
+  }
+}

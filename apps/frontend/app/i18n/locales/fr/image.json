@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "Nuage (Cloud)",
+  "upload-from-local": "Locale",
+  "upload-from-shared": "Collection partagée",
+  "upload-fail": "Échec du téléversement",
+  "update": "Modifier",
+  "create-folder": "Créer un dossier",
+  "model": "Modèle",
+  "settings": "Paramètres",
+  "aspect-ratio": "Format d'image",
+  "resolution": "Résolution",
+  "guidance": "Guidage (CFG)",
+  "steps": "Étapes",
+  "prompt": "Invite",
+  "prompt-placeholder": "Décrivez votre image...",
+  "generate": "Générer"
+}

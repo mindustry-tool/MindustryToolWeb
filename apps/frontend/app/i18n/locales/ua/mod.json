@@ -1,0 +1,23 @@
+{
+  "installed": "Встановлені моди",
+  "download": "Завантажити мод",
+  "install": "Встановити мод",
+  "delete": "Видалити мод",
+  "title": "Моди",
+  "nsfw-warning": "Попередження: контент 18+",
+  "more-topics": "ще +{{count}}",
+  "no-mod-found": "Мод не знайдено",
+  "hidden-badge": "Прихований",
+  "json-badge": "JSON",
+  "default-badge": "За замовчуванням",
+  "import-mod": "Імпортувати мод",
+  "import-description": "Введіть URL мода, який ви хочете імпортувати. Мод має бути репозиторієм GitHub із релізом.",
+  "import-url-placeholder": "Введіть URL мода",
+  "import-url-title": "Введіть правильний URL репозиторію GitHub",
+  "import-invalid-url": "Недійсний URL репозиторію GitHub",
+  "select": "Вибрати",
+  "no-release": "Немає релізу",
+  "release-draft": "Чернетка",
+  "release-pre-release": "Попередній реліз",
+  "downloads": "завантажень"
+}

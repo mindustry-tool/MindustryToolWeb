@@ -1,0 +1,12 @@
+{
+  "login-to-mindustry": "Se connecter à Mindustry",
+  "return-to-app": "Retourner à l'appli",
+  "bad-login-link": "Lien de connexion invalide",
+  "login-success": "Connexion réussie, vous pouvez fermer cet onglet.",
+  "token-expired": "Le jeton a expiré, veuillez vous reconnecter via /login",
+  "token-invalid": "Jeton invalide ou expiré",
+  "name": "Nom :",
+  "login-btn": "Connexion",
+  "login-with-discord": "Se connecter avec Discord",
+  "login-with-google": "Se connecter avec Google"
+}

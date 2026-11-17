@@ -1,0 +1,23 @@
+{
+  "installed": "Installed mods",
+  "download": "Download mods",
+  "install": "Install mod",
+  "delete": "Delete mod",
+  "title": "Mods",
+  "nsfw-warning": "Warming 18+ Content",
+  "more-topics": "+{{count}} more",
+  "no-mod-found": "No mod found",
+  "hidden-badge": "Hidden",
+  "json-badge": "JSON",
+  "default-badge": "Default",
+  "import-mod": "Import Mod",
+  "import-description": "Enter the URL of the mod you want to import. The mod must be a GitHub repository with a release.",
+  "import-url-placeholder": "Enter mod URL",
+  "import-url-title": "Enter a valid GitHub repository URL",
+  "import-invalid-url": "Invalid GitHub repository URL",
+  "select": "Select",
+  "no-release": "No release",
+  "release-draft": "Draft",
+  "release-pre-release": "Pre-release",
+  "downloads": "downloads"
+}

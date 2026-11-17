@@ -1,0 +1,1131 @@
+generator client {
+    provider        = "prisma-client-js"
+    output          = "../src/generated/prisma"
+    previewFeatures = ["fullTextSearchPostgres"]
+}
+
+datasource db {
+    provider = "postgresql"
+}
+
+model Account {
+    userId     String    @db.Uuid
+    provider   String
+    providerId String
+    updatedAt  DateTime? @db.Timestamp(6)
+    createdAt  DateTime  @db.Timestamp(6)
+    user       User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@id([providerId, provider])
+    @@index([providerId])
+    @@index([provider])
+    @@index([userId])
+}
+
+model Role {
+    id          String     @id @unique
+    description String
+    color       String?
+    icon        String?
+    level       Int        @default(0)
+    updatedAt   DateTime?  @db.Timestamp(6)
+    createdAt   DateTime   @db.Timestamp(6)
+    authorities String[]   @default([])
+    isDefault   Boolean    @default(false)
+    userRoles   UserRole[]
+}
+
+model UserRole {
+    userId    String   @db.Uuid
+    roleId    String
+    createdAt DateTime @default(now()) @db.Timestamp(6)
+    role      Role     @relation(fields: [roleId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+    user      User     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@id([userId, roleId])
+    @@index([roleId])
+    @@index([userId])
+}
+
+model User {
+    id                                      String             @id @default(uuid(7)) @db.Uuid
+    name                                    String
+    about                                   String?
+    imageUrl                                String?            @map("image_url")
+    thumbnail                               String?
+    updatedAt                               DateTime?          @map("updated_at") @db.Timestamptz(6)
+    createdAt                               DateTime           @map("created_at") @db.Timestamptz(6)
+    authorities                             String[]           @default([])
+    bannedUntil                             DateTime?          @db.Timestamptz(6)
+    account                                 Account[]
+    actions                                 Action[]           @relation("ActionsTriggeredBy")
+    comments                                Comment[]          @relation("Comments")
+    verifiedContentPatches                  ContentPatch[]     @relation("VerifierContentPatch")
+    authoredUploads                         GitHubUpload[]     @relation("GitHubUploadAuthor")
+    createdUploads                          GitHubUpload[]     @relation("GitHubUploadCreator")
+    createdItemTags                         ItemTag[]          @relation("ItemTagCreatedBy")
+    updatedItemTags                         ItemTag[]          @relation("ItemTagUpdatedBy")
+    userLikes                               Like[]             @relation("Likes")
+    managerAuthorities                      ManagerAuthority[]
+    verifiedMaps                            Map[]              @relation("VerifierMap")
+    createdMedia                            Media[]            @relation("MediaCreatedBy")
+    createdPlanets                          Planet[]           @relation("PlanetCreatedBy")
+    updatedPlanets                          Planet[]           @relation("PlanetUpdatedBy")
+    Post_Post_createdByToUser               Post[]             @relation("Post_createdByToUser")
+    Post_Post_updatedByToUser               Post[]             @relation("Post_updatedByToUser")
+    verifiedPosts                           Post[]             @relation("VerifierPosts")
+    verifiedSchematics                      Schematic[]        @relation("VerifierSchematic")
+    createdServer                           Server[]           @relation("ServerCreator")
+    updatedServer                           Server[]           @relation("ServerUpdater")
+    createdServerActionLog                  ServerActionLog[]  @relation("ServerActionLogCreator")
+    ServerAdmin_ServerAdmin_createdByToUser ServerAdmin[]      @relation("ServerAdmin_createdByToUser")
+    ServerAdmin_ServerAdmin_updatedByToUser ServerAdmin[]      @relation("ServerAdmin_updatedByToUser")
+    serverAuthorities                       ServerAuthority[]
+    groupServerAdminAuthorities             GroupServerAdmin[]
+    createdServerEnv                        ServerEnv[]        @relation("ServerEnvCreator")
+    updatedServerEnv                        ServerEnv[]        @relation("ServerEnvUpdater")
+    createdLogs                             ServerLog[]        @relation("ServerActionLogCreator")
+    createdServerManager                    ServerManager[]    @relation("ServerManagerCreator")
+    updatedServerManager                    ServerManager[]    @relation("ServerManagerUpdater")
+    createdTags                             Tag[]              @relation("TagCreatedBy")
+    updatedTags                             Tag[]              @relation("TagUpdatedBy")
+    createdCategories                       TagCategory[]      @relation("TagCategoryCreatedBy")
+    updatedCategories                       TagCategory[]      @relation("TagCategoryUpdatedBy")
+    createdGroupLinks                       TagGroup[]         @relation("GroupLinkCreatedBy")
+    updatedGroupLinks                       TagGroup[]         @relation("GroupLinkUpdatedBy")
+    roles                                   UserRole[]
+    createdWikis                            Wiki[]             @relation("WikiCreatedBy")
+    updatedWikis                            Wiki[]             @relation("WikiUpdatedBy")
+    stats                                   UserStats[]
+    serverPlayers                           ServerPlayer[]
+    itemCreated                             Item[]             @relation("ItemCreatedBy")
+    itemUpdated                             Item[]             @relation("ItemUpdatedBy")
+    ownedGroups                             ServerGroup[]      @relation("ServerGroupOwner")
+    createdGroups                           ServerGroup[]      @relation("ServerGroupCreator")
+    updatedGroups                           ServerGroup[]      @relation("ServerGroupUpdater")
+    createdGroupServerAdmins                GroupServerAdmin[] @relation("GroupServerAdminCreator")
+    updatedGroupServerAdmins                GroupServerAdmin[] @relation("GroupServerAdminUpdater")
+    createdGroupServerEnvs                  GroupServerEnv[]   @relation("GroupServerEnvCreator")
+    updatedGroupServerEnvs                  GroupServerEnv[]   @relation("GroupServerEnvUpdater")
+
+    friendshipsA   Friendship[]    @relation("A")
+    friendshipsB   Friendship[]    @relation("B")
+    globalMessages GlobalMessage[]
+    logic          Logic[]
+
+    crashReports CrashReport[]
+    storageSlots StorageSlot[]
+    chatMessages ChatMessage[]
+
+    notifications              Notification[]
+    broadcastNotificationReads BroadcastNotificationRead[]
+    notificationPreference     NotificationPreference?
+}
+
+model ChatMessage {
+    id        String   @id @default(uuid(7)) @db.Uuid
+    content   String
+    createdBy String   @db.Uuid
+    createdAt DateTime @default(now()) @db.Timestamptz(6)
+    replyTo   String?  @db.Uuid
+    channelId String   @db.Uuid
+
+    user    User        @relation(fields: [createdBy], references: [id], onDelete: Cascade)
+    channel ChatChannel @relation(fields: [channelId], references: [id], onDelete: Cascade)
+
+    @@index([channelId, createdAt(sort: Desc)])
+    @@index([createdAt(sort: Desc)])
+}
+
+model ChatChannel {
+    id            String        @id @default(uuid(7)) @db.Uuid
+    name          String
+    createdAt     DateTime      @default(now()) @db.Timestamptz(6)
+    updatedAt     DateTime?     @updatedAt @db.Timestamptz(6)
+    lastMessageId String?
+    chatMessages  ChatMessage[]
+
+    @@unique([name])
+}
+
+model StorageSlot {
+    id        String     @id @default(uuid(7)) @db.Uuid
+    name      String
+    userId    String     @db.Uuid
+    createdAt DateTime   @default(now()) @db.Timestamptz(6)
+    updatedAt DateTime?  @updatedAt @db.Timestamptz(6)
+    user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+    files     UserFile[]
+
+    @@unique([userId, name])
+    @@index([userId])
+}
+
+model UserFile {
+    id         String      @id @default(uuid(7)) @db.Uuid
+    slotId     String      @db.Uuid
+    path       String
+    fileHashId String?     @db.Uuid
+    createdAt  DateTime    @default(now()) @db.Timestamptz(6)
+    updatedAt  DateTime?   @updatedAt @db.Timestamptz(6)
+    deletedAt  DateTime?   @db.Timestamptz(6)
+    slot       StorageSlot @relation(fields: [slotId], references: [id], onDelete: Cascade)
+    fileHash   FileHash?   @relation(fields: [fileHashId], references: [id], onDelete: Restrict)
+
+    @@unique([slotId, path])
+    @@index([slotId])
+}
+
+model FileHash {
+    id        String     @id @default(uuid(7)) @db.Uuid
+    hash      String     @unique
+    size      Int
+    minioPath String
+    createdAt DateTime   @default(now()) @db.Timestamptz(6)
+    userFiles UserFile[]
+
+    @@index([hash])
+}
+
+model Tag {
+    id            String      @id @default(uuid(7)) @db.Uuid
+    name          String
+    fullTag       String      @map("full_tag")
+    position      Int
+    categoryId    String      @db.Uuid
+    icon          String?
+    createdAt     DateTime    @db.Timestamptz(6)
+    updatedAt     DateTime?   @db.Timestamptz(6)
+    createdBy     String      @db.Uuid
+    updatedBy     String?     @db.Uuid
+    itemTags      ItemTag[]
+    category      TagCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+    createdByUser User        @relation("TagCreatedBy", fields: [createdBy], references: [id], onDelete: Cascade)
+    updatedByUser User?       @relation("TagUpdatedBy", fields: [updatedBy], references: [id], onDelete: SetNull)
+
+    planets PlanetTag[]
+
+    @@unique([name, categoryId], map: "tag_name_categoryId_key")
+}
+
+model PlanetTag {
+    tagId    String @db.Uuid
+    planetId String @db.Uuid
+
+    tag    Tag    @relation(fields: [tagId], references: [id], onDelete: Cascade)
+    planet Planet @relation(fields: [planetId], references: [id], onDelete: Cascade)
+
+    @@id([tagId, planetId])
+}
+
+model TagCategory {
+    id            String     @id @default(uuid(7)) @db.Uuid
+    name          String     @unique
+    color         String
+    duplicate     Boolean
+    createdAt     DateTime   @db.Timestamptz(6)
+    updatedAt     DateTime?  @db.Timestamptz(6)
+    createdBy     String     @db.Uuid
+    updatedBy     String?    @db.Uuid
+    position      Int        @default(0)
+    tags          Tag[]
+    createdByUser User       @relation("TagCategoryCreatedBy", fields: [createdBy], references: [id], onDelete: Cascade)
+    updatedByUser User?      @relation("TagCategoryUpdatedBy", fields: [updatedBy], references: [id], onDelete: SetNull)
+    groupLinks    TagGroup[]
+}
+
+model TagGroup {
+    group         String
+    categoryId    String      @db.Uuid
+    position      Int         @default(0)
+    createdAt     DateTime    @db.Timestamptz(6)
+    updatedAt     DateTime?   @db.Timestamptz(6)
+    createdBy     String      @db.Uuid
+    updatedBy     String?     @db.Uuid
+    category      TagCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+    createdByUser User        @relation("GroupLinkCreatedBy", fields: [createdBy], references: [id], onDelete: Cascade)
+    updatedByUser User?       @relation("GroupLinkUpdatedBy", fields: [updatedBy], references: [id], onDelete: SetNull)
+
+    @@id([group, categoryId])
+}
+
+model ItemTag {
+    itemId        String    @db.Uuid
+    tagId         String    @db.Uuid
+    createdAt     DateTime  @db.Timestamptz(6)
+    updatedAt     DateTime? @db.Timestamptz(6)
+    createdBy     String    @db.Uuid
+    updatedBy     String?   @db.Uuid
+    createdByUser User      @relation("ItemTagCreatedBy", fields: [createdBy], references: [id], onDelete: Cascade, onUpdate: NoAction)
+    item          Item      @relation(fields: [itemId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+    tag           Tag       @relation(fields: [tagId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+    updatedByUser User?     @relation("ItemTagUpdatedBy", fields: [updatedBy], references: [id], onDelete: SetNull, onUpdate: NoAction)
+
+    @@id([itemId, tagId])
+    @@index([itemId, tagId], map: "idx_item_tag_item_id_tag_id")
+    @@index([itemId], map: "idx_item_tag_itemId")
+    @@index([tagId], map: "idx_item_tag_tagId")
+}
+
+model Planet {
+    id            String    @id @default(uuid(7)) @db.Uuid
+    name          String    @unique
+    position      Int       @default(0)
+    createdAt     DateTime  @map("created_at") @db.Timestamptz(6)
+    updatedAt     DateTime? @db.Timestamptz(6)
+    createdBy     String    @db.Uuid
+    updatedBy     String?   @db.Uuid
+    icon          String?
+    createdByUser User      @relation("PlanetCreatedBy", fields: [createdBy], references: [id], onDelete: Cascade)
+    updatedByUser User?     @relation("PlanetUpdatedBy", fields: [updatedBy], references: [id], onDelete: SetNull)
+
+    tags PlanetTag[]
+}
+
+model PlayerConnect {
+    id       String  @id @default(uuid(7)) @db.Uuid
+    name     String  @unique
+    address  String
+    port     Int     @default(0)
+    httpPort Int     @default(0)
+    deleted  Boolean @default(false)
+}
+
+model Post {
+    id                        String             @id @default(uuid(7)) @db.Uuid
+    title                     String
+    content                   String
+    summary                   String
+    status                    PostStatus         @default(DRAFT)
+    language                  String             @db.VarChar(5)
+    cover                     String?
+    verifierId                String?            @db.Uuid
+    postType                  PostType           @default(POST)
+    createdAt                 DateTime           @db.Timestamptz(6)
+    updatedAt                 DateTime?          @db.Timestamptz(6)
+    createdBy                 String             @db.Uuid
+    updatedBy                 String?            @db.Uuid
+    likes                     Int                @default(0)
+    views                     Int                @default(0)
+    comments                  Int                @default(0)
+    itemId                    String             @unique @db.Uuid
+    verificationStatus        VerificationStatus @default(PENDING)
+    item                      Item               @relation(fields: [itemId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "FK_Post_itemId")
+    User_Post_createdByToUser User               @relation("Post_createdByToUser", fields: [createdBy], references: [id], onDelete: Cascade)
+    User_Post_updatedByToUser User?              @relation("Post_updatedByToUser", fields: [updatedBy], references: [id], onDelete: SetNull)
+    verifier                  User?              @relation("VerifierPosts", fields: [verifierId], references: [id], onDelete: SetNull)
+    userViews                 PostView[]
+}
+
+model Schematic {
+    id                 String             @id @default(uuid(7)) @db.Uuid
+    itemId             String             @unique @db.Uuid
+    name               String
+    data               Bytes
+    description        String
+    meta               Json               @db.Json
+    width              Int                @default(0)
+    height             Int                @default(0)
+    verifierId         String?            @db.Uuid
+    downloads          Int                @default(0)
+    comments           Int                @default(0)
+    likes              Int                @default(0)
+    blocks             String[]           @default([])
+    verificationStatus VerificationStatus @default(PENDING)
+    verifier           User?              @relation("VerifierSchematic", fields: [verifierId], references: [id], onDelete: SetNull, onUpdate: NoAction)
+    item               Item               @relation(fields: [itemId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@index([data], type: Hash)
+    @@index([name])
+    @@index([verificationStatus, itemId], map: "schematic_verification_itemid_idx")
+    @@index([verificationStatus], map: "schematic_verify_index")
+    @@index([blocks], type: Hash)
+}
+
+model ContentPatch {
+    id                 String             @id @default(uuid(7)) @db.Uuid
+    itemId             String             @unique @db.Uuid
+    name               String
+    data               String
+    description        String
+    verifierId         String?            @db.Uuid
+    downloads          Int                @default(0)
+    comments           Int                @default(0)
+    likes              Int                @default(0)
+    verificationStatus VerificationStatus @default(PENDING)
+    type               ContentPatchType   @default(DATA)
+    item               Item               @relation(fields: [itemId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+    verifier           User?              @relation("VerifierContentPatch", fields: [verifierId], references: [id], onDelete: SetNull, onUpdate: NoAction)
+
+    @@index([data])
+    @@index([name])
+    @@index([verificationStatus])
+    @@index([itemId])
+    @@index([verificationStatus, itemId])
+    @@index([name, verificationStatus])
+}
+
+model Map {
+    id                 String             @id @default(uuid(7)) @db.Uuid
+    itemId             String             @unique @db.Uuid
+    name               String
+    data               Bytes
+    description        String
+    meta               Json               @db.Json
+    width              Int                @default(0)
+    height             Int                @default(0)
+    verifierId         String?            @db.Uuid
+    verificationStatus VerificationStatus @default(PENDING)
+    downloads          Int                @default(0)
+    comments           Int                @default(0)
+    likes              Int                @default(0)
+    item               Item               @relation(fields: [itemId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+    verifier           User?              @relation("VerifierMap", fields: [verifierId], references: [id], onDelete: SetNull, onUpdate: NoAction)
+
+    @@index([name])
+    @@index([data], map: "Map_data_hash_idx", type: Hash)
+    @@index([verificationStatus, itemId], map: "map_verification_itemid_idx")
+    @@index([verificationStatus], map: "map_verify_index")
+}
+
+model Wiki {
+    id            String    @id @default(uuid(7)) @db.Uuid
+    path          String    @unique
+    createdAt     DateTime  @db.Timestamptz(6)
+    updatedAt     DateTime? @db.Timestamptz(6)
+    createdBy     String    @db.Uuid
+    updatedBy     String?   @db.Uuid
+    createdByUser User      @relation("WikiCreatedBy", fields: [createdBy], references: [id], onDelete: Cascade)
+    updatedByUser User?     @relation("WikiUpdatedBy", fields: [updatedBy], references: [id], onDelete: SetNull)
+}
+
+model WikiLink {
+    wikiId String @db.Uuid
+    postId String @db.Uuid
+
+    @@id([wikiId, postId])
+    @@index([postId])
+}
+
+model Media {
+    id            String     @id @default(uuid(7)) @db.Uuid
+    url           String
+    width         Int        @default(0)
+    height        Int        @default(0)
+    createdAt     DateTime   @db.Timestamptz(6)
+    createdBy     String     @db.Uuid
+    mediaType     MediaType? @default(USER_CREATED)
+    name          String     @default("")
+    createdByUser User       @relation("MediaCreatedBy", fields: [createdBy], references: [id], onDelete: Cascade)
+
+    @@index([createdBy, createdAt])
+    @@index([createdBy, mediaType, createdAt(sort: Desc)], map: "idx_media_createdby_mediatype_createdat_desc")
+}
+
+model Image {
+    id        String   @id @default(uuid(7)) @db.Uuid
+    url       String?
+    name      String
+    width     Int      @default(0)
+    height    Int      @default(0)
+    createdAt DateTime @db.Timestamptz(6)
+    createdBy String   @db.Uuid
+    parentId  String?  @db.Uuid
+    parent    Image?   @relation("Image", fields: [parentId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+    children  Image[]  @relation("Image")
+
+    @@index([parentId, createdAt], map: "Image_parentId_createdAt_index")
+}
+
+model Icon {
+    id        String     @id
+    url       String
+    createdAt DateTime   @db.Timestamptz(6)
+    createdBy String     @db.Uuid
+    groupId   String?    @default(dbgenerated("'01990f00-af47-7f2e-86ba-4b3d3525202f'::uuid")) @db.Uuid
+    group     IconGroup? @relation(fields: [groupId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model IconGroup {
+    id        String    @id @default(uuid(7)) @db.Uuid
+    name      String
+    createdAt DateTime  @db.Timestamptz(6)
+    createdBy String    @db.Uuid
+    updatedAt DateTime? @db.Timestamptz(6)
+    updatedBy String?   @db.Uuid
+
+    icons Icon[]
+}
+
+model Like {
+    itemId    String   @db.Uuid
+    userId    String   @db.Uuid
+    createdAt DateTime @default(now()) @db.Timestamptz(6)
+    item      Item     @relation(fields: [itemId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_like_item")
+    user      User     @relation("Likes", fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_like_user")
+
+    @@id([itemId, userId], map: "pk_like")
+    @@index([itemId], map: "idx_like_itemId")
+    @@index([userId], map: "idx_like_userId")
+}
+
+model PostView {
+    postId    String   @db.Uuid
+    ip        String
+    createdAt DateTime @default(now()) @db.Timestamptz(6)
+    post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@id([postId, ip])
+}
+
+model Item {
+    id            String        @id @default(uuid(7)) @db.Uuid
+    itemType      ItemType      @default(POST)
+    createdAt     DateTime      @db.Timestamptz(6)
+    createdBy     String        @db.Uuid
+    updatedAt     DateTime?     @db.Timestamptz(6)
+    updatedBy     String?       @db.Uuid
+    comments      Comment[]
+    contentPatchs ContentPatch?
+    tags          ItemTag[]
+    likes         Like[]
+
+    map       Map?
+    post      Post?
+    schematic Schematic?
+
+    createdByUser User  @relation("ItemCreatedBy", fields: [createdBy], references: [id], onDelete: Cascade)
+    updatedByUser User? @relation("ItemUpdatedBy", fields: [updatedBy], references: [id], onDelete: SetNull)
+
+    @@index([createdBy], map: "idx_item_createdBy")
+    @@index([updatedBy], map: "idx_item_updatedBy")
+    @@index([createdAt], map: "item_created_at_index")
+}
+
+model Comment {
+    id        String    @id @default(uuid(7)) @db.Uuid
+    itemId    String    @db.Uuid
+    replyId   String?   @db.Uuid
+    content   String
+    createdAt DateTime  @default(now()) @db.Timestamptz(6)
+    userId    String    @db.Uuid
+    user      User      @relation("Comments", fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "FK_Comment_userId")
+    item      Item      @relation(fields: [itemId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_comment_item")
+    reply     Comment?  @relation("CommentReply", fields: [replyId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_comment_reply")
+    Comment   Comment[] @relation("CommentReply")
+
+    @@index([itemId], map: "idx_comment_itemId")
+    @@index([replyId], map: "idx_comment_replyId")
+}
+
+model Action {
+    id          String   @id @default(uuid(7)) @db.Uuid
+    name        String
+    metadata    Json     @db.Json
+    triggeredAt DateTime @default(now()) @db.Timestamptz(6)
+    triggeredBy String   @db.Uuid
+    trigger     User     @relation("ActionsTriggeredBy", fields: [triggeredBy], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@index([triggeredBy])
+    @@index([triggeredAt(sort: Desc)])
+}
+
+model GitHubUpload {
+    id        String       @id @default(uuid(7)) @db.Uuid
+    githubUrl String
+    authorId  String       @db.Uuid
+    createdAt DateTime     @default(now()) @db.Timestamptz(6)
+    createdBy String       @db.Uuid
+    status    UploadStatus @default(PENDING)
+    total     Int?         @default(0)
+    success   Int?         @default(0)
+    fail      Int?         @default(0)
+    duplicate Int?         @default(0)
+    author    User         @relation("GitHubUploadAuthor", fields: [authorId], references: [id], onDelete: Cascade)
+    creator   User         @relation("GitHubUploadCreator", fields: [createdBy], references: [id], onDelete: Cascade)
+
+    @@index([authorId])
+    @@index([createdBy])
+    @@index([status])
+}
+
+model ServerEnv {
+    id        String    @id @default(uuid(7)) @db.Uuid
+    serverId  String    @db.Uuid
+    name      String
+    value     String
+    createdAt DateTime  @db.Timestamptz(6)
+    createdBy String    @db.Uuid
+    updatedAt DateTime? @db.Timestamptz(6)
+    updatedBy String?   @db.Uuid
+    creator   User      @relation("ServerEnvCreator", fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "ServerEnv_creator_fkey")
+    server    Server    @relation(fields: [serverId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "ServerEnv_server_fkey")
+    updater   User?     @relation("ServerEnvUpdater", fields: [updatedBy], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "ServerEnv_updater_fkey")
+
+    @@index([serverId])
+}
+
+model ServerManager {
+    id          String             @id @default(uuid(7)) @db.Uuid
+    address     String
+    name        String
+    securityKey String
+    accessToken String
+    createdAt   DateTime           @db.Timestamptz(6)
+    createdBy   String             @db.Uuid
+    updatedAt               DateTime?          @db.Timestamptz(6)
+    updatedBy               String?            @db.Uuid
+    isFreeToUse             Boolean?           @default(false)
+    consecutiveFailures     Int                @default(0)
+    nextConnectionAttemptAt DateTime?          @db.Timestamptz(6)
+    authorities             ManagerAuthority[]
+    servers                 Server[]
+    creator     User               @relation("ServerManagerCreator", fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "ServerManager_creator_fkey")
+    updater     User?              @relation("ServerManagerUpdater", fields: [updatedBy], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "ServerManager_updater_fkey")
+
+    @@index([createdBy])
+}
+
+model ServerGroup {
+    id          String               @id @default(uuid(7)) @db.Uuid
+    name        String
+    description String?
+    ownerId     String               @db.Uuid
+    createdAt   DateTime             @db.Timestamptz(6)
+    createdBy   String               @db.Uuid
+    updatedAt   DateTime?            @db.Timestamptz(6)
+    updatedBy   String?              @db.Uuid
+    owner       User                 @relation("ServerGroupOwner", fields: [ownerId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "ServerGroup_owner_fkey")
+    creator     User                 @relation("ServerGroupCreator", fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "ServerGroup_creator_fkey")
+    updater     User?                @relation("ServerGroupUpdater", fields: [updatedBy], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "ServerGroup_updater_fkey")
+    servers     Server[]
+    admins      GroupServerAdmin[]
+    envs        GroupServerEnv[]
+    webhooks    ServerGroupWebhook[]
+
+    @@index([ownerId])
+}
+
+model GroupServerAdmin {
+    id          String      @id @default(uuid(7)) @db.Uuid
+    groupId     String      @db.Uuid
+    userId      String      @db.Uuid
+    authorities String[]    @default([])
+    createdAt   DateTime    @db.Timestamptz(6)
+    createdBy   String      @db.Uuid
+    updatedAt   DateTime?   @db.Timestamptz(6)
+    updatedBy   String?     @db.Uuid
+    group       ServerGroup @relation(fields: [groupId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "GroupServerAdmin_group_fkey")
+    user        User        @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "GroupServerAdmin_user_fkey")
+    creator     User        @relation("GroupServerAdminCreator", fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "GroupServerAdmin_creator_fkey")
+    updater     User?       @relation("GroupServerAdminUpdater", fields: [updatedBy], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "GroupServerAdmin_updater_fkey")
+
+    @@unique([groupId, userId])
+    @@index([groupId])
+    @@index([userId])
+}
+
+model GroupServerEnv {
+    id        String      @id @default(uuid(7)) @db.Uuid
+    groupId   String      @db.Uuid
+    name      String
+    value     String
+    createdAt DateTime    @db.Timestamptz(6)
+    createdBy String      @db.Uuid
+    updatedAt DateTime?   @db.Timestamptz(6)
+    updatedBy String?     @db.Uuid
+    group     ServerGroup @relation(fields: [groupId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "GroupServerEnv_group_fkey")
+    creator   User        @relation("GroupServerEnvCreator", fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "GroupServerEnv_creator_fkey")
+    updater   User?       @relation("GroupServerEnvUpdater", fields: [updatedBy], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "GroupServerEnv_updater_fkey")
+
+    @@unique([groupId, name])
+    @@index([groupId])
+}
+
+model Server {
+    id            String            @id @default(uuid(7)) @db.Uuid
+    name          String
+    description   String
+    mode          String
+    gamemode      String?
+    port          Int
+    hostCommand   String?
+    webhook       String?
+    avatar        String?
+    status        Int               @default(0)
+    players       Int               @default(0)
+    isDefault     Boolean           @default(false)
+    isOfficial    Boolean           @default(false)
+    isAutoTurnOff Boolean           @default(true)
+    isHub         Boolean           @default(false)
+    managerId     String            @db.Uuid
+    groupId       String?           @db.Uuid
+    createdAt     DateTime          @db.Timestamptz(6)
+    createdBy     String            @db.Uuid
+    updatedAt     DateTime?         @db.Timestamptz(6)
+    updatedBy     String?           @db.Uuid
+    gameVersion   Int               @default(0)
+    image         String
+    mapName       String?
+    mods          String[]
+    cpu           Float             @default(0.75)
+    memory        Int               @default(512)
+    score         Int?              @default(0)
+    credit        Int               @default(60)
+    deletedAt     DateTime?         @db.Timestamptz(6)
+    creator       User              @relation("ServerCreator", fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Server_creator_fkey")
+    manager       ServerManager     @relation(fields: [managerId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "Server_manager_fkey")
+    group         ServerGroup?      @relation(fields: [groupId], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "Server_group_fkey")
+    updater       User?             @relation("ServerUpdater", fields: [updatedBy], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "Server_updater_fkey")
+    actions       ServerActionLog[]
+    ServerAdmin   ServerAdmin[]
+    authorities   ServerAuthority[]
+    envs          ServerEnv[]
+    events        ServerEvent[]
+    logs          ServerLog[]
+    webhooks      ServerWebhook[]
+
+    @@index([managerId])
+    @@index([groupId])
+    @@index([deletedAt, status, players(sort: Desc), isOfficial(sort: Desc), updatedAt(sort: Desc)])
+}
+
+model ServerLog {
+    id        String   @id @default(uuid(7)) @db.Uuid
+    serverId  String   @db.Uuid
+    data      String
+    level     String
+    createdAt DateTime @db.Timestamptz(6)
+    createdBy String   @db.Uuid
+    creator   User     @relation("ServerActionLogCreator", fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction)
+    server    Server   @relation(fields: [serverId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@index([serverId])
+    @@index([serverId, id(sort: Asc)])
+}
+
+model ServerActionLog {
+    id        String   @id @default(uuid(7)) @db.Uuid
+    serverId  String   @db.Uuid
+    action    String   @db.Uuid
+    createdAt DateTime @db.Timestamptz(6)
+    createdBy String   @db.Uuid
+    creator   User     @relation("ServerActionLogCreator", fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "ServerActionLog_creator_fkey")
+    server    Server   @relation(fields: [serverId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "ServerActionLog_server_fkey")
+
+    @@index([serverId])
+    @@index([createdBy])
+}
+
+model ServerEvent {
+    id        String   @id @default(uuid(7)) @db.Uuid
+    serverId  String   @db.Uuid
+    event     String   @db.Uuid
+    data      Json
+    createdAt DateTime @db.Timestamptz(6)
+    server    Server   @relation(fields: [serverId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "ServerEvent_server_fkey")
+
+    @@index([serverId])
+}
+
+model ServerPlayer {
+    id        String   @id @default(uuid(7))
+    name      String
+    uuid      String
+    ip        String
+    createdAt DateTime @db.Timestamptz(6)
+    userId    String   @db.Uuid
+    user      User     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@index([userId])
+    @@index([uuid])
+}
+
+model ServerLoginToken {
+    id        String   @id
+    serverId  String   @db.Uuid
+    token     String   @unique
+    ip        String
+    name      String
+    uuid      String
+    createdAt DateTime @db.Timestamptz(6)
+
+    @@index([token])
+    @@index([createdAt])
+    @@index([ip, uuid])
+}
+
+model ServerAuthority {
+    id          String    @id @default(uuid(7)) @db.Uuid
+    serverId    String    @db.Uuid
+    userId      String    @db.Uuid
+    authorities String[]  @default([])
+    createdAt   DateTime  @db.Timestamptz(6)
+    createdBy   String    @db.Uuid
+    updatedAt   DateTime? @db.Timestamptz(6)
+    updatedBy   String?   @db.Uuid
+    server      Server    @relation(fields: [serverId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+    user        User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@unique([serverId, userId])
+    @@index([serverId])
+    @@index([userId])
+}
+
+model ManagerAuthority {
+    id          String        @id @default(uuid(7)) @db.Uuid
+    managerId   String        @db.Uuid
+    userId      String        @db.Uuid
+    authorities String[]      @default([])
+    createdAt   DateTime      @db.Timestamptz(6)
+    createdBy   String        @db.Uuid
+    updatedAt   DateTime?     @db.Timestamptz(6)
+    updatedBy   String?       @db.Uuid
+    manager     ServerManager @relation(fields: [managerId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+    user        User          @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@unique([managerId, userId])
+    @@index([managerId])
+    @@index([userId])
+}
+
+model ServerWebhook {
+    id        String    @id @default(uuid(7)) @db.Uuid
+    serverId  String    @db.Uuid
+    url       String
+    event     String
+    data      String
+    active    Boolean   @default(true)
+    createdAt DateTime  @db.Timestamptz(6)
+    createdBy String    @db.Uuid
+    updatedAt DateTime? @db.Timestamptz(6)
+    updatedBy String?   @db.Uuid
+    server    Server    @relation(fields: [serverId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@index([serverId])
+}
+
+model ServerGroupWebhook {
+    id        String      @id @default(uuid(7)) @db.Uuid
+    groupId   String      @db.Uuid
+    url       String
+    event     String
+    data      String
+    active    Boolean     @default(true)
+    createdAt DateTime    @db.Timestamptz(6)
+    createdBy String      @db.Uuid
+    updatedAt DateTime?   @db.Timestamptz(6)
+    updatedBy String?     @db.Uuid
+    group     ServerGroup @relation(fields: [groupId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+    @@index([groupId])
+}
+
+model ShareLink {
+    id        String   @id @default(uuid(7)) @db.Uuid
+    url       String
+    count     Int      @default(0)
+    createdBy String   @db.Uuid
+    createdAt DateTime @db.Timestamptz(6)
+
+    @@index([createdBy])
+}
+
+model UserInvited {
+    userId String @db.Uuid
+    ip     String
+
+    @@id([userId, ip])
+}
+
+model UserStats {
+    userId String @db.Uuid
+    name   String
+    value  Int    @default(0)
+    user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@id([userId, name])
+}
+
+model ServerAdmin {
+    id                               String    @id @db.Uuid
+    serverId                         String    @db.Uuid
+    userId                           String    @db.Uuid
+    createdAt                        DateTime  @db.Timestamptz(6)
+    createdBy                        String    @db.Uuid
+    updatedAt                        DateTime? @db.Timestamptz(6)
+    updatedBy                        String?   @db.Uuid
+    User_ServerAdmin_createdByToUser User      @relation("ServerAdmin_createdByToUser", fields: [createdBy], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "ServerAdmin_creator_fkey")
+    Server                           Server    @relation(fields: [serverId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "ServerAdmin_server_fkey")
+    User_ServerAdmin_updatedByToUser User?     @relation("ServerAdmin_updatedByToUser", fields: [updatedBy], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "ServerAdmin_updater_fkey")
+
+    @@index([serverId])
+    @@index([userId])
+}
+
+model Friendship {
+    userId    String       @db.Uuid
+    friendId  String       @db.Uuid
+    status    FriendStatus @default(PENDING)
+    createdAt DateTime     @default(now())
+
+    user   User @relation("A", fields: [userId], references: [id], onDelete: Cascade)
+    friend User @relation("B", fields: [friendId], references: [id], onDelete: Cascade)
+
+    @@id([userId, friendId])
+    @@index([status])
+    @@index([friendId])
+}
+
+model GlobalMessage {
+    id        String   @id @default(uuid(7)) @db.Uuid
+    content   String
+    createdAt DateTime @db.Timestamptz(6)
+    createdBy String   @db.Uuid
+
+    user User @relation(fields: [createdBy], references: [id], onDelete: Cascade)
+
+    @@index([createdAt(sort: Desc)])
+    @@index([createdBy])
+}
+
+model Logic {
+    id      String @id @default(uuid(7)) @db.Uuid
+    name    String
+    content Json
+
+    createdAt DateTime @db.Timestamptz(6)
+    createdBy String   @db.Uuid
+
+    user User @relation(fields: [createdBy], references: [id], onDelete: Cascade)
+
+    @@index([createdBy])
+    @@index([createdAt(sort: Desc)])
+}
+
+enum FriendStatus {
+    PENDING
+    ACCEPTED
+    BLOCK
+    REJECTED
+}
+
+enum ItemType {
+    SCHEMATIC
+    MAP
+    POST
+    CONTENT_PATCH
+}
+
+enum PostType {
+    POST
+    WIKI
+}
+
+enum VerificationStatus {
+    VERIFIED
+    PENDING
+    REJECTED
+}
+
+enum PostStatus {
+    DRAFT
+    PUBLISHED
+    ARCHIVED
+}
+
+enum MediaType {
+    USER_CREATED
+    ICON
+}
+
+enum UploadStatus {
+    PENDING
+    DOWNLOADING
+    PROCESSING
+    COMPLETED
+    FAILED
+}
+
+enum ContentPatchType {
+    DATA
+    DATAPACK
+}
+
+model IpVisit {
+    ip         String   @id
+    client     String   @default("web")
+    lastAccess DateTime @db.Timestamptz(6)
+
+    @@index([lastAccess])
+    @@index([client, lastAccess])
+}
+
+model CrashReport {
+    id            String      @id @default(uuid(7)) @db.Uuid
+    mod           String?
+    crashedMod    CrashedMod? @relation(fields: [mod], references: [id])
+    message       String
+    cause         String      @default("")
+    stacktrace    String
+    fingerprint   String      @default("")
+    status        CrashStatus @default(PENDING)
+    count         Int         @default(1)
+    createdAt     DateTime    @default(now()) @db.Timestamptz(6)
+    updatedAt     DateTime?   @updatedAt @db.Timestamptz(6)
+    updatedBy     String?     @db.Uuid
+    updatedByUser User?       @relation(fields: [updatedBy], references: [id], onDelete: SetNull, onUpdate: NoAction)
+
+    @@index([mod])
+    @@index([status])
+    @@index([fingerprint])
+    @@index([updatedBy])
+}
+
+model CrashedMod {
+    id        String        @id
+    name      String?
+    createdAt DateTime      @default(now()) @db.Timestamptz(6)
+    updatedAt DateTime?     @updatedAt @db.Timestamptz(6)
+    crashes   CrashReport[]
+}
+
+enum CrashStatus {
+    PENDING
+    RESOLVED
+}
+
+model Notification {
+    id             String           @id @default(uuid(7)) @db.Uuid
+    userId         String           @db.Uuid
+    user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+    code           String           @db.VarChar(128)
+    params         Json
+    groupKey       String?          @db.VarChar(128)
+    aggregationKey String?          @db.VarChar(128)
+    link           String?          @db.VarChar(1024)
+    readAt         DateTime?        @db.Timestamptz(6)
+    createdAt      DateTime         @default(now()) @db.Timestamptz(6)
+    updatedAt      DateTime         @updatedAt @db.Timestamptz(6)
+
+    @@index([userId, readAt])
+    @@index([userId, createdAt(sort: Desc)])
+    @@index([userId, aggregationKey, readAt])
+    @@index([userId, groupKey])
+}
+
+model BroadcastNotification {
+    id        String                      @id @default(uuid(7)) @db.Uuid
+    code      String                      @db.VarChar(128)
+    params    Json
+    link      String?                     @db.VarChar(1024)
+    createdAt DateTime                    @default(now()) @db.Timestamptz(6)
+    reads     BroadcastNotificationRead[]
+
+    @@index([createdAt(sort: Desc)])
+}
+
+model BroadcastNotificationRead {
+    id          String                @id @default(uuid(7)) @db.Uuid
+    broadcastId String                @db.Uuid
+    broadcast   BroadcastNotification @relation(fields: [broadcastId], references: [id], onDelete: Cascade)
+    userId      String                @db.Uuid
+    user        User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+    readAt      DateTime              @default(now()) @db.Timestamptz(6)
+
+    @@unique([broadcastId, userId])
+    @@index([userId])
+}
+
+model NotificationPreference {
+    id                  String   @id @default(uuid(7)) @db.Uuid
+    userId              String   @unique @db.Uuid
+    user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+    inAppEnabled        Boolean  @default(true)
+    verificationEnabled Boolean  @default(true)
+    likesEnabled        Boolean  @default(true)
+    shareRewardEnabled  Boolean  @default(true)
+    systemEnabled       Boolean  @default(true)
+    commentsEnabled     Boolean  @default(true)
+    updatedAt           DateTime @updatedAt @db.Timestamptz(6)
+}
+
+
+
+
+model CommunityServerGroup {
+    id           String                    @id @default(uuid(7)) @db.Uuid
+    name         String                    @unique
+    channels     String[]                  @default([])
+    totalPlayers Int                       @default(0)
+    serverCount  Int                       @default(0)
+    lastSeenAt   DateTime                  @db.Timestamptz(6)
+    deletedAt    DateTime?                 @db.Timestamptz(6)
+    createdAt    DateTime                  @default(now()) @db.Timestamptz(6)
+    updatedAt    DateTime                  @updatedAt @db.Timestamptz(6)
+    servers      CommunityServer[]
+    snapshots    CommunityGroupSnapshot[]
+
+    @@index([totalPlayers(sort: Desc)])
+    @@index([deletedAt])
+}
+
+model CommunityServer {
+    id          String                    @id @default(uuid(7)) @db.Uuid
+    groupId     String                    @db.Uuid
+    address     String                    @unique
+    host        String
+    port        Int                       @default(6567)
+    channels    String[]                  @default([])
+    resolvedIp  String?
+    countryCode String?
+    isOnline    Boolean                   @default(false)
+    ping        Int?
+    serverName  String?
+    cleanName   String?
+    mapName     String?
+    gamemode    String?
+    wave        Int?
+    players     Int                       @default(0)
+    playerLimit Int?
+    version     Int?
+    description String?
+    isHub       Boolean                   @default(false)
+    lastPingAt  DateTime?                 @db.Timestamptz(6)
+    lastSeenAt  DateTime                  @db.Timestamptz(6)
+    deletedAt   DateTime?                 @db.Timestamptz(6)
+    createdAt   DateTime                  @default(now()) @db.Timestamptz(6)
+    updatedAt   DateTime                  @updatedAt @db.Timestamptz(6)
+    group       CommunityServerGroup      @relation(fields: [groupId], references: [id], onDelete: Cascade)
+    snapshots   CommunityServerSnapshot[]
+
+    @@index([groupId])
+    @@index([isOnline, players(sort: Desc)])
+    @@index([countryCode])
+    @@index([deletedAt])
+}
+
+model CommunityServerSnapshot {
+    id        String          @id @default(uuid(7)) @db.Uuid
+    serverId  String          @db.Uuid
+    players   Int
+    ping      Int?
+    isOnline  Boolean
+    createdAt DateTime        @default(now()) @db.Timestamptz(6)
+    server    CommunityServer @relation(fields: [serverId], references: [id], onDelete: Cascade)
+
+    @@index([serverId, createdAt(sort: Desc)])
+    @@index([createdAt])
+}
+
+model CommunityGroupSnapshot {
+    id            String               @id @default(uuid(7)) @db.Uuid
+    groupId       String               @db.Uuid
+    totalPlayers  Int
+    activeServers Int
+    createdAt     DateTime             @default(now()) @db.Timestamptz(6)
+    group         CommunityServerGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+
+    @@index([groupId, createdAt(sort: Desc)])
+    @@index([createdAt])
+}

@@ -1,0 +1,23 @@
+{
+  "installed": "已安装模组",
+  "download": "下载模组",
+  "install": "安装模组",
+  "delete": "删除模组",
+  "title": "模组",
+  "nsfw-warning": "18+ 内容警告",
+  "more-topics": "+{{count}} 个更多",
+  "no-mod-found": "未找到模组",
+  "hidden-badge": "隐藏",
+  "json-badge": "JSON",
+  "default-badge": "默认",
+  "import-mod": "导入模组",
+  "import-description": "输入要导入模组的 URL。模组必须是带有 Release 发布的 GitHub 仓库。",
+  "import-url-placeholder": "输入模组 URL",
+  "import-url-title": "输入有效的 GitHub 仓库 URL",
+  "import-invalid-url": "无效的 GitHub 仓库 URL",
+  "select": "选择",
+  "no-release": "无发布版本",
+  "release-draft": "草稿",
+  "release-pre-release": "预发布",
+  "downloads": "次下载"
+}

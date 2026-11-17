@@ -1,0 +1,11 @@
+{
+  "provider": "Nhà cung cấp kết nối",
+  "room": "Phòng kết nối",
+  "server": "Máy chủ",
+  "map": "Bản đồ",
+  "created-at": "Ngày tạo",
+  "player": "Người chơi",
+  "version": "Phiên bản",
+  "locale": "Ngôn ngữ",
+  "mods": "Các bản Mod"
+}

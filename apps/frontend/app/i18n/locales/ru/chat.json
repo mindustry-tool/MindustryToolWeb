@@ -1,0 +1,22 @@
+{
+  "online-users": "Пользователи в сети",
+  "users": "Пользователи",
+  "new-chat": "Новый чат",
+  "thinking": "Думает...",
+  "channels": "Каналы",
+  "online": "В сети",
+  "please-sign-in": "Пожалуйста, войдите, чтобы писать в чат",
+  "your-message": "Ваше сообщение",
+  "read-without-sign-in": "Вы можете читать сообщения без входа",
+  "replying-to-message": "Ответ на сообщение",
+  "no-message-yet": "Сообщений пока нет",
+  "disconnected": "Отключено",
+  "nobody-online": "Никого нет в сети",
+  "replying": "Отвечает",
+  "reply": "Ответить",
+  "show-less": "Показать меньше",
+  "show-more": "Показать больше",
+  "original-message-unavailable": "Исходное сообщение недоступно",
+  "ask-anything": "Спросите о чем угодно...",
+  "delete-confirm": "Вы уверены, что хотите удалить это сообщение?"
+}

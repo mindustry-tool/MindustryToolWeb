@@ -1,0 +1,11 @@
+{
+  "provider": "접속 제공자",
+  "room": "접속 방",
+  "server": "서버",
+  "map": "맵",
+  "created-at": "생성 시간",
+  "player": "플레이어",
+  "version": "버전",
+  "locale": "로케일",
+  "mods": "모드"
+}

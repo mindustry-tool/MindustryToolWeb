@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "Aus Cloud laden",
+  "upload-from-local": "Lokal",
+  "upload-from-shared": "Geteilte Bibliothek",
+  "upload-fail": "Upload fehlgeschlagen",
+  "update": "Aktualisieren",
+  "create-folder": "Ordner erstellen",
+  "model": "Modell",
+  "settings": "Einstellungen",
+  "aspect-ratio": "Seitenverhältnis",
+  "resolution": "Auflösung",
+  "guidance": "Führungswert (CFG)",
+  "steps": "Schritte",
+  "prompt": "Texteingabe",
+  "prompt-placeholder": "Beschreiben Sie Ihr Bild...",
+  "generate": "Generieren"
+}

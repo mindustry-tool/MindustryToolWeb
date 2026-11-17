@@ -1,0 +1,12 @@
+{
+  "login-to-mindustry": "Вход в Mindustry",
+  "return-to-app": "Вернуться в приложение",
+  "bad-login-link": "Некорректная ссылка входа",
+  "login-success": "Вход успешен, вы можете закрыть эту вкладку",
+  "token-expired": "Срок действия токена истек, пожалуйста, выполните /login снова",
+  "token-invalid": "Недействительный или просроченный токен",
+  "name": "Имя:",
+  "login-btn": "Войти",
+  "login-with-discord": "Войти через Discord",
+  "login-with-google": "Войти через Google"
+}

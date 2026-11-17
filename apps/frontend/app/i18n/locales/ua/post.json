@@ -1,0 +1,16 @@
+{
+  "new-post": "Новий допис",
+  "title": "Назва",
+  "summary": "Короткий зміст",
+  "cover": "Обкладинка",
+  "language": "Мова",
+  "status": "Статус",
+  "status-PUBLISHED": "Опубліковано",
+  "select-cover": "Виберіть зображення обкладинки",
+  "submitting": "Надсилання",
+  "submit-success": "Надіслано успішно",
+  "browse-post": "Переглянути публікацію",
+  "report": "Звіт",
+  "status-ARCHIVED": "Архівовано",
+  "status-DRAFT": "Чернетка"
+}

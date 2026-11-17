@@ -1,0 +1,20 @@
+{
+    "importOrder": [
+        "(.*).css",
+        "server-only",
+        "@/app/(.*)",
+        "@/components/(.*)",
+        "@/types/(.*)",
+        "@/query/(.*)",
+        "@/hooks/(.*)",
+        "@/(.*)",
+        "@(.*)",
+        "[./]"
+    ],
+    "singleQuote": true,
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "printWidth": 120,
+    "tabWidth": 2,
+    "trailingComma": "all"
+}

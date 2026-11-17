@@ -1,0 +1,12 @@
+{
+  "remove-link-description": "Hủy liên kết bài viết này",
+  "remove-link": "Xóa liên kết",
+  "link": "Liên kết Wiki",
+  "link-description": "Liên kết một trang wiki vào bài viết",
+  "path": "Đường dẫn",
+  "create-description": "Tạo trang wiki mới",
+  "edit-description": "Sửa trang wiki",
+  "delete-description": "Xóa bản ghi này",
+  "home": "Trang chủ",
+  "nothing-there-yet": "Chưa có nội dung ở đây, vui lòng chọn ngôn ngữ khác"
+}

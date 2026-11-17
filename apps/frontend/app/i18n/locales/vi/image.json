@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "Đám mây",
+  "upload-from-local": "Máy cục bộ",
+  "upload-from-shared": "Thư viện chung",
+  "upload-fail": "Tải lên thất bại",
+  "update": "Cập nhật",
+  "create-folder": "Tạo thư mục",
+  "model": "Mô hình",
+  "settings": "Cài đặt",
+  "aspect-ratio": "Tỷ lệ khung hình",
+  "resolution": "Độ phân giải",
+  "guidance": "Độ hướng dẫn (CFG)",
+  "steps": "Số bước",
+  "prompt": "Lời nhắc",
+  "prompt-placeholder": "Mô tả hình ảnh của bạn...",
+  "generate": "Tạo ảnh"
+}

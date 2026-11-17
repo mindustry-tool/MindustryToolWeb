@@ -1,0 +1,20 @@
+{
+  "add-row-after": "Додати рядок після",
+  "add-row-before": "Додати рядок перед",
+  "delete-column": "Видалити стовпець",
+  "merge-or-split": "Об'єднати або розділити",
+  "add-column-before": "Додати стовпець перед",
+  "delete-row": "Видалити рядок",
+  "go-to-next-cell": "Перейти до наступної клітинки",
+  "merge-cells": "Об'єднати клітинки",
+  "delete-table": "Видалити таблицю",
+  "add-column-after": "Додати стовпець після",
+  "toggle-header-cell": "Перемикання комірки заголовка",
+  "go-to-previous-cell": "Перейти до попередньої комірки",
+  "toggle-header-column": "Перемикання стовпця заголовка",
+  "insert-table": "Вставити таблицю",
+  "toggle-header-row": "Перемикання рядка заголовка",
+  "fix-tables": "Виправити таблиці",
+  "set-cell-attribute": "Встановити атрибут комірки",
+  "split-cell": "Розділити клітинку"
+}

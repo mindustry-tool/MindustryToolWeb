@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WS-RPC wire contract freeze notification envelope has the frozen key set 1`] = `
+{
+  "id": "<uuid>",
+  "kind": "notification",
+  "payload": {
+    "name": "start",
+  },
+  "type": "event",
+}
+`;
+
+exports[`WS-RPC wire contract freeze request envelope has the frozen key set 1`] = `
+{
+  "id": "<uuid>",
+  "kind": "request",
+  "payload": {
+    "serverId": "00000000-0000-7000-8000-000000000000",
+  },
+  "type": "pause",
+}
+`;
+
+exports[`WS-RPC wire contract freeze response envelope has the frozen key set 1`] = `
+{
+  "id": "<uuid>",
+  "kind": "response",
+  "payload": {
+    "ok": true,
+  },
+  "responseOf": "req-1",
+  "type": "pause",
+}
+`;
+
+exports[`WS-RPC wire contract freeze response-error envelope carries a string payload 1`] = `
+{
+  "id": "<uuid>",
+  "kind": "response-error",
+  "payload": "boom",
+  "responseOf": "req-1",
+  "type": "pause",
+}
+`;

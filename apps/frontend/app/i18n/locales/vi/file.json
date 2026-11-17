@@ -1,0 +1,16 @@
+{
+  "empty": "Tệp trống",
+  "create-new-folder": "Tạo thư mục",
+  "create-new-file": "Tạo tệp",
+  "delete": "Xóa tệp",
+  "create": "Tạo tệp mới",
+  "download": "Tải tệp",
+  "edit": "Chỉnh sửa",
+  "save": "Lưu thay đổi",
+  "saving": "Đang lưu...",
+  "cancel": "Hủy",
+  "saved": "Lưu tệp thành công",
+  "save-error": "Lưu tệp thất bại",
+  "downloading": "Đang tải tệp...",
+  "downloaded": "Tải tệp thành công"
+}

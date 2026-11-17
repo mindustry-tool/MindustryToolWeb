@@ -1,0 +1,23 @@
+{
+  "installed": "Установленные моды",
+  "download": "Скачать моды",
+  "install": "Установить мод",
+  "delete": "Удалить мод",
+  "title": "Моды",
+  "nsfw-warning": "Предупреждение: контент 18+",
+  "more-topics": "еще +{{count}}",
+  "no-mod-found": "Мод не найден",
+  "hidden-badge": "Скрытый",
+  "json-badge": "JSON",
+  "default-badge": "По умолчанию",
+  "import-mod": "Импортировать мод",
+  "import-description": "Введите URL мода, который хотите импортировать. Мод должен быть репозиторием GitHub с релизом.",
+  "import-url-placeholder": "Введите URL мода",
+  "import-url-title": "Введите корректный URL репозитория GitHub",
+  "import-invalid-url": "Недействительный URL репозитория GitHub",
+  "select": "Выбрать",
+  "no-release": "Нет релиза",
+  "release-draft": "Черновик",
+  "release-pre-release": "Пре-релиз",
+  "downloads": "скачиваний"
+}

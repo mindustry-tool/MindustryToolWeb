@@ -1,0 +1,7 @@
+{
+  "username": "Nom d'utilisateur",
+  "username-note": "Met à jour votre nom d'affichage sur le site.",
+  "note": "Ces paramètres déterminent la façon dont les étiquettes sont affichées dans l'application.",
+  "show-tag-number": "Afficher le numéro des tags",
+  "show-tag-name": "Afficher le nom des tags"
+}

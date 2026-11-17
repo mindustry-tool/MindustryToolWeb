@@ -1,0 +1,12 @@
+{
+  "remove-link-description": "この投稿のリンクを解除",
+  "remove-link": "リンクを削除",
+  "link": "Wikiにリンク",
+  "link-description": "Wikiページを投稿にリンクします",
+  "path": "パス",
+  "create-description": "新しいWikiページを作成",
+  "edit-description": "Wikiページを編集",
+  "delete-description": "この記録を削除",
+  "home": "ホーム",
+  "nothing-there-yet": "まだコンテンツがありません。別の言語を選択してください"
+}

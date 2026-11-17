@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "クラウド",
+  "upload-from-local": "ローカル",
+  "upload-from-shared": "共有ライブラリ",
+  "upload-fail": "アップロード失敗",
+  "update": "更新",
+  "create-folder": "フォルダを作成",
+  "model": "モデル",
+  "settings": "設定",
+  "aspect-ratio": "アスペクト比",
+  "resolution": "解像度",
+  "guidance": "ガイダンス (CFG)",
+  "steps": "ステップ数",
+  "prompt": "プロンプト",
+  "prompt-placeholder": "画像を説明してください...",
+  "generate": "生成"
+}

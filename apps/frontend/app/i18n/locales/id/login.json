@@ -1,0 +1,12 @@
+{
+  "login-to-mindustry": "Masuk ke mindustry",
+  "return-to-app": "Kembali ke aplikasi",
+  "bad-login-link": "Tautan masuk tidak valid",
+  "login-success": "Berhasil masuk, Anda dapat menutup tab ini",
+  "token-expired": "Token kedaluwarsa, silakan /login lagi",
+  "token-invalid": "Token tidak valid atau kedaluwarsa",
+  "name": "Nama:",
+  "login-btn": "Masuk",
+  "login-with-discord": "Masuk dengan Discord",
+  "login-with-google": "Masuk dengan Google"
+}

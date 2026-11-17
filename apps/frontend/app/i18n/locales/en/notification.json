@@ -1,0 +1,122 @@
+{
+  "title": "Notifications",
+  "empty": "No notifications yet",
+  "unread": "Unread",
+  "all": "All",
+  "markAllAsRead": "Mark all as read",
+  "clearRead": "Clear read",
+  "viewAll": "View all notifications",
+  "types": {
+    "VERIFICATION": "Verification",
+    "LIKE": "Likes",
+    "SHARE_REWARD": "Rewards",
+    "SYSTEM": "System",
+    "COMMENT": "Comments"
+  },
+  "categories": {
+    "personal": "Personal",
+    "system": "System"
+  },
+  "unreadOnly": "Unread only",
+  "groupByEntity": "Group by entity",
+  "emptyPersonal": "You have no personal activity alerts yet.",
+  "emptySystem": "No system announcements or maintenance notices.",
+  "allCaughtUp": "You're all caught up! No unread notifications.",
+  "codes": {
+    "verification": {
+      "approved": {
+        "title": "Content Approved",
+        "description": "Your {{itemType}} \"{{itemName}}\" has been verified and approved! You earned {{credits}} credits."
+      },
+      "rejected": {
+        "title": "Content Rejected",
+        "description": "Your {{itemType}} \"{{itemName}}\" was rejected during review. {{reason}}"
+      }
+    },
+    "like": {
+      "single": {
+        "title": "New Like",
+        "description": "{{actorName}} liked your {{itemType}} \"{{itemName}}\"."
+      },
+      "multiple": {
+        "title": "New Likes",
+        "description": "{{actorName}} and {{count}} others liked your {{itemType}} \"{{itemName}}\"."
+      }
+    },
+    "share_reward": {
+      "title": "Share Link Reward",
+      "description": "Your shared link was visited! You received {{credits}} credits."
+    },
+    "system": {
+      "announcement": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      },
+      "maintenance": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      }
+    },
+    "comment": {
+      "post": {
+        "title": "New Comment",
+        "description": "{{actorName}} commented on your {{itemType}} \"{{itemName}}\"."
+      },
+      "reply": {
+        "title": "New Reply",
+        "description": "{{actorName}} replied to your comment on \"{{itemName}}\"."
+      }
+    }
+  },
+  "preferences": {
+    "title": "Notification Settings",
+    "description": "Manage how and when you receive in-app alerts.",
+    "inApp": "Enable In-App Notifications",
+    "verification": "Content Verification Alerts",
+    "verificationDesc": "Receive notifications when your uploaded items are reviewed.",
+    "likes": "Like Notifications",
+    "likesDesc": "Receive notifications when someone likes your content.",
+    "rewards": "Reward Notifications",
+    "rewardsDesc": "Receive alerts when you earn credits from shared links.",
+    "system": "System Announcements",
+    "systemDesc": "Receive platform updates and maintenance notices.",
+    "saved": "Notification preferences saved.",
+    "comments": "Comment & Reply Notifications",
+    "commentsDesc": "Receive alerts when someone comments on your content or replies to your comments.",
+    "update-fail": "Failed to update notification preferences"
+  },
+  "admin": {
+    "title": "Notification Management",
+    "description": "Compose and broadcast system announcements to users.",
+    "target": "Target Audience",
+    "targetAll": "All Users (Broadcast)",
+    "targetUser": "Specific User",
+    "targetRole": "Specific Role",
+    "targetIdPlaceholder": "Enter user ID or role ID",
+    "severity": "Severity",
+    "severityInfo": "Information",
+    "severityWarning": "Warning",
+    "severityAlert": "Alert",
+    "subject": "Title",
+    "subjectPlaceholder": "Enter announcement title...",
+    "message": "Message",
+    "messagePlaceholder": "Write announcement message...",
+    "link": "Action Link (Optional)",
+    "linkPlaceholder": "/schematics/...",
+    "send": "Send Announcement",
+    "sending": "Broadcasting...",
+    "sentSuccess": "Announcement successfully broadcasted!",
+    "livePreview": "Live Preview",
+    "history": "Broadcast History",
+    "noHistory": "No broadcast history found.",
+    "historyDate": "Date",
+    "historyTarget": "Target",
+    "historyTitle": "Title",
+    "historyLink": "Link",
+    "actions": "Actions",
+    "delete": "Delete Announcement",
+    "deleteSuccess": "Announcement successfully deleted.",
+    "deleteConfirmTitle": "Delete System Announcement?",
+    "deleteConfirmDesc": "Are you sure you want to delete this announcement? It will be permanently removed from all users' inboxes and cannot be recovered."
+  }
+}

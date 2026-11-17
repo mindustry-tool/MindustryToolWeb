@@ -1,0 +1,16 @@
+{
+  "new-post": "Neuer Beitrag",
+  "title": "Titel",
+  "summary": "Zusammenfassung",
+  "cover": "Titelbild",
+  "language": "Sprache",
+  "status": "Status der Veröffentlichung",
+  "status-PUBLISHED": "Veröffentlicht",
+  "select-cover": "Titelbild auswählen",
+  "submitting": "Wird gesendet...",
+  "submit-success": "Erfolgreich gesendet",
+  "browse-post": "Beitrag durchsuchen",
+  "report": "Melden",
+  "status-ARCHIVED": "Archiviert",
+  "status-DRAFT": "Entwurf"
+}

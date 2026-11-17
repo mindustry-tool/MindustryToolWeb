@@ -1,0 +1,20 @@
+{
+  "add-row-after": "Zeile danach hinzufügen",
+  "add-row-before": "Zeile davor hinzufügen",
+  "delete-column": "Spalte löschen",
+  "merge-or-split": "Zusammenführen oder teilen",
+  "add-column-before": "Spalte davor hinzufügen",
+  "delete-row": "Zeile löschen",
+  "go-to-next-cell": "Zur nächsten Zelle gehen",
+  "merge-cells": "Zellen zusammenführen",
+  "delete-table": "Tabelle löschen",
+  "add-column-after": "Spalte danach hinzufügen",
+  "toggle-header-cell": "Kopfzelle umschalten",
+  "go-to-previous-cell": "Zur vorherigen Zelle gehen",
+  "toggle-header-column": "Kopfspalte umschalten",
+  "insert-table": "Tabelle einfügen",
+  "toggle-header-row": "Kopfzeile umschalten",
+  "fix-tables": "Tabellen reparieren",
+  "set-cell-attribute": "Zellenattribut festlegen",
+  "split-cell": "Zelle teilen"
+}

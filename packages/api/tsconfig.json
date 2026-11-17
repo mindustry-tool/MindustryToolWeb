@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"lib": [
+			"ESNext",
+			"DOM"
+		],
+		"downlevelIteration": true,
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"declaration": true,
+		"strict": true,
+		"pretty": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"experimentalDecorators": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"composite": true,
+	},
+	"include": [
+		"src/**/*.ts"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}

@@ -1,0 +1,16 @@
+{
+  "new-post": "新規投稿",
+  "title": "タイトル",
+  "summary": "概要",
+  "cover": "カバー画像",
+  "language": "言語",
+  "status": "ステータス",
+  "status-PUBLISHED": "公開済み",
+  "select-cover": "カバー画像を選択",
+  "submitting": "送信中...",
+  "submit-success": "送信成功",
+  "browse-post": "投稿を閲覧",
+  "report": "通報",
+  "status-ARCHIVED": "アーカイブ済み",
+  "status-DRAFT": "下書き"
+}

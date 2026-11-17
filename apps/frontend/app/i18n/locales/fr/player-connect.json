@@ -1,0 +1,11 @@
+{
+  "provider": "Fournisseurs Player-Connect",
+  "room": "Salons Player-Connect",
+  "server": "Serveur",
+  "map": "Carte",
+  "created-at": "Créé à",
+  "player": "Joueur",
+  "version": "Version du jeu",
+  "locale": "Langue",
+  "mods": "Mods installés"
+}

@@ -1,0 +1,20 @@
+{
+  "add-row-after": "Add row after",
+  "add-row-before": "Add row before",
+  "delete-column": "Delete column",
+  "merge-or-split": "Merge or split",
+  "add-column-before": "Add column before",
+  "delete-row": "Delete row",
+  "go-to-next-cell": "Go to next cell",
+  "merge-cells": "Merge cells",
+  "delete-table": "Delete table",
+  "add-column-after": "Add column after",
+  "toggle-header-cell": "Toggle header cell",
+  "go-to-previous-cell": "Go to previous cell",
+  "toggle-header-column": "Toggle header column",
+  "insert-table": "Insert table",
+  "toggle-header-row": "Toggle header row",
+  "fix-tables": "Fix tables",
+  "set-cell-attribute": "Set cell attribute",
+  "split-cell": "Split cell"
+}

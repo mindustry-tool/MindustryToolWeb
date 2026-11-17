@@ -1,0 +1,16 @@
+{
+  "new-post": "Postingan Baru",
+  "title": "Judul",
+  "summary": "Ringkasan",
+  "cover": "Sampul",
+  "language": "Bahasa",
+  "status": "Status Kiriman",
+  "status-PUBLISHED": "Diterbitkan",
+  "select-cover": "Pilih gambar sampul",
+  "submitting": "Mengirimkan",
+  "submit-success": "Pengiriman berhasil",
+  "browse-post": "Telusuri postingan",
+  "report": "Laporan",
+  "status-ARCHIVED": "Diarsipkan",
+  "status-DRAFT": "Draf"
+}

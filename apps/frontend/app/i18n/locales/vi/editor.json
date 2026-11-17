@@ -1,0 +1,20 @@
+{
+  "add-row-after": "Thêm hàng phía sau",
+  "add-row-before": "Thêm hàng phía trước",
+  "delete-column": "Xóa cột",
+  "merge-or-split": "Gộp hoặc tách",
+  "add-column-before": "Thêm cột phía trước",
+  "delete-row": "Xóa hàng",
+  "go-to-next-cell": "Đến ô kế tiếp",
+  "merge-cells": "Gộp ô",
+  "delete-table": "Xóa bảng",
+  "add-column-after": "Thêm cột phía sau",
+  "toggle-header-cell": "Bật/tắt ô tiêu đề",
+  "go-to-previous-cell": "Về ô trước đó",
+  "toggle-header-column": "Bật/tắt cột tiêu đề",
+  "insert-table": "Chèn bảng",
+  "toggle-header-row": "Bật/tắt hàng tiêu đề",
+  "fix-tables": "Sửa bảng",
+  "set-cell-attribute": "Đặt thuộc tính ô",
+  "split-cell": "Tách ô"
+}

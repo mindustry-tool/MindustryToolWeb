@@ -1,0 +1,122 @@
+{
+  "title": "Benachrichtigungen",
+  "empty": "Noch keine Benachrichtigungen",
+  "unread": "Ungelesen",
+  "all": "Alle",
+  "markAllAsRead": "Alle als gelesen markieren",
+  "clearRead": "Gelesene löschen",
+  "viewAll": "Alle Benachrichtigungen anzeigen",
+  "types": {
+    "VERIFICATION": "Überprüfung",
+    "LIKE": "Gefällt mir",
+    "SHARE_REWARD": "Belohnungen",
+    "SYSTEM": "Systemmeldung",
+    "COMMENT": "Kommentare"
+  },
+  "categories": {
+    "personal": "Persönlich",
+    "system": "Systemmeldungen"
+  },
+  "unreadOnly": "Nur ungelesene",
+  "groupByEntity": "Nach Element gruppieren",
+  "emptyPersonal": "Sie haben noch keine persönlichen Benachrichtigungen.",
+  "emptySystem": "Keine Systemankündigungen oder Wartungsmeldungen.",
+  "allCaughtUp": "Alles auf dem neuesten Stand! Keine ungelesenen Benachrichtigungen.",
+  "codes": {
+    "verification": {
+      "approved": {
+        "title": "Inhalt freigegeben",
+        "description": "Ihr {{itemType}} \"{{itemName}}\" wurde überprüft und genehmigt! Sie haben {{credits}} Credits erhalten."
+      },
+      "rejected": {
+        "title": "Inhalt abgelehnt",
+        "description": "Ihr {{itemType}} \"{{itemName}}\" wurde abgelehnt. Grund: {{reason}}"
+      }
+    },
+    "like": {
+      "single": {
+        "title": "Neues „Gefällt mir“",
+        "description": "{{actorName}} gefällt Ihr {{itemType}} \"{{itemName}}\"."
+      },
+      "multiple": {
+        "title": "Neue „Gefällt mir“-Angaben",
+        "description": "{{actorName}} und {{count}} weiteren Personen gefällt Ihr {{itemType}} \"{{itemName}}\"."
+      }
+    },
+    "share_reward": {
+      "title": "Belohnung für geteilten Link",
+      "description": "Ihr geteilter Link wurde aufgerufen! Sie haben {{credits}} Credits erhalten."
+    },
+    "system": {
+      "announcement": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      },
+      "maintenance": {
+        "title": "{{title}}",
+        "description": "{{message}}"
+      }
+    },
+    "comment": {
+      "post": {
+        "title": "Neuer Kommentar",
+        "description": "{{actorName}} hat deinen {{itemType}} \"{{itemName}}\" kommentiert."
+      },
+      "reply": {
+        "title": "Neue Antwort",
+        "description": "{{actorName}} hat auf deinen Kommentar zu \"{{itemName}}\" geantwortet."
+      }
+    }
+  },
+  "preferences": {
+    "title": "Benachrichtigungseinstellungen",
+    "description": "Verwalten Sie, wie und wann Sie Benachrichtigungen erhalten.",
+    "inApp": "In-App-Benachrichtigungen aktivieren",
+    "verification": "Inhaltsprüfungs-Benachrichtigungen",
+    "verificationDesc": "Benachrichtigt werden, wenn hochgeladene Inhalte geprüft werden.",
+    "likes": "Like-Benachrichtigungen",
+    "likesDesc": "Benachrichtigt werden, wenn jemand Ihre Inhalte mag.",
+    "rewards": "Belohnungs-Benachrichtigungen",
+    "rewardsDesc": "Benachrichtigt werden, wenn Sie Credits durch Links verdienen.",
+    "system": "Systemankündigungen",
+    "systemDesc": "Plattform-Updates und Wartungshinweise erhalten.",
+    "saved": "Benachrichtigungseinstellungen gespeichert.",
+    "comments": "Kommentar- & Antwortbenachrichtigungen",
+    "commentsDesc": "Erhalte Benachrichtigungen, wenn jemand deine Inhalte kommentiert oder auf deine Kommentare antwortet.",
+    "update-fail": "Benachrichtigungseinstellungen konnten nicht aktualisiert werden"
+  },
+  "admin": {
+    "title": "Benachrichtigungsverwaltung",
+    "description": "Systemankündigungen verfassen und an Benutzer senden.",
+    "target": "Zielgruppe",
+    "targetAll": "Alle Benutzer (Rundsendung)",
+    "targetUser": "Bestimmter Benutzer",
+    "targetRole": "Bestimmte Rolle",
+    "targetIdPlaceholder": "Benutzer-ID oder Rollen-ID eingeben",
+    "severity": "Dringlichkeit",
+    "severityInfo": "Infohinweis",
+    "severityWarning": "Warnung",
+    "severityAlert": "Alarm",
+    "subject": "Titel",
+    "subjectPlaceholder": "Titel der Ankündigung eingeben...",
+    "message": "Nachricht",
+    "messagePlaceholder": "Nachrichtentext verfassen...",
+    "link": "Aktionslink (optional)",
+    "linkPlaceholder": "/schematics/...",
+    "send": "Ankündigung senden",
+    "sending": "Wird gesendet...",
+    "sentSuccess": "Ankündigung erfolgreich gesendet!",
+    "livePreview": "Live-Vorschau",
+    "history": "Verlauf",
+    "noHistory": "Kein Sendungsverlauf gefunden.",
+    "historyDate": "Datum",
+    "historyTarget": "Ziel",
+    "historyTitle": "Titel",
+    "historyLink": "Aktionslink",
+    "actions": "Aktionen",
+    "delete": "Ankündigung löschen",
+    "deleteSuccess": "Ankündigung erfolgreich gelöscht.",
+    "deleteConfirmTitle": "Systemankündigung löschen?",
+    "deleteConfirmDesc": "Sind Sie sicher, dass Sie diese Ankündigung löschen möchten? Sie wird dauerhaft aus den Postfächern aller Benutzer entfernt und kann nicht wiederhergestellt werden."
+  }
+}

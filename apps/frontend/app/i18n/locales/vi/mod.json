@@ -1,0 +1,23 @@
+{
+  "installed": "Mod đã cài",
+  "download": "Tải Mod",
+  "install": "Cài Mod",
+  "delete": "Xóa Mod",
+  "title": "Bản sửa đổi (Mods)",
+  "nsfw-warning": "Cảnh báo nội dung 18+",
+  "more-topics": "+{{count}} chủ đề khác",
+  "no-mod-found": "Không tìm thấy bản mod nào",
+  "hidden-badge": "Đã ẩn",
+  "json-badge": "JSON",
+  "default-badge": "Mặc định",
+  "import-mod": "Nhập bản mod",
+  "import-description": "Nhập bản mod từ kho lưu trữ GitHub có bản phát hành.",
+  "import-url-placeholder": "Nhập URL bản mod",
+  "import-url-title": "Nhập URL kho lưu trữ GitHub hợp lệ",
+  "import-invalid-url": "URL kho lưu trữ GitHub không hợp lệ",
+  "select": "Lựa chọn",
+  "no-release": "Không có bản phát hành",
+  "release-draft": "Bản nháp",
+  "release-pre-release": "Bản thử nghiệm",
+  "downloads": "lượt tải"
+}

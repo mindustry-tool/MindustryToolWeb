@@ -1,0 +1,12 @@
+{
+  "remove-link-description": "Verknüpfung zu diesem Beitrag aufheben",
+  "remove-link": "Link entfernen",
+  "link": "Wiki verknüpfen",
+  "link-description": "Verknüpft eine Wiki-Seite mit einem Beitrag",
+  "path": "Pfad",
+  "create-description": "Neue Wiki-Seite erstellen",
+  "edit-description": "Wiki-Seite bearbeiten",
+  "delete-description": "Diesen Eintrag löschen",
+  "home": "Startseite",
+  "nothing-there-yet": "Hier gibt es noch nichts, bitte wählen Sie eine andere Sprache"
+}

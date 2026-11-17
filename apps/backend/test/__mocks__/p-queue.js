@@ -1,0 +1,1 @@
+class PQueue { constructor() { this.size = 0; this.pending = 0; } add(fn) { return fn(); } } module.exports = PQueue; module.exports.default = PQueue;

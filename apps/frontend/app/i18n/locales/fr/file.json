@@ -1,0 +1,16 @@
+{
+  "empty": "Fichier vide",
+  "create-new-folder": "Créer un dossier",
+  "create-new-file": "Créer un fichier",
+  "delete": "Supprimer le fichier",
+  "create": "Créer un fichier",
+  "download": "Télécharger le fichier",
+  "edit": "Modifier",
+  "save": "Enregistrer les modifications",
+  "saving": "Enregistrement...",
+  "cancel": "Annuler",
+  "saved": "Fichier enregistré avec succès",
+  "save-error": "Échec de l'enregistrement du fichier",
+  "downloading": "Téléchargement du fichier...",
+  "downloaded": "Fichier téléchargé avec succès"
+}

@@ -1,0 +1,11 @@
+{
+  "provider": "Player connect provider",
+  "room": "Player connect room",
+  "server": "Server",
+  "map": "Map",
+  "created-at": "Created at",
+  "player": "Player",
+  "version": "Version",
+  "locale": "Locale",
+  "mods": "Mods"
+}

@@ -1,0 +1,11 @@
+{
+  "provider": "接続プロバイダー",
+  "room": "接続ルーム",
+  "server": "サーバー",
+  "map": "マップ",
+  "created-at": "作成日時",
+  "player": "プレイヤー",
+  "version": "バージョン",
+  "locale": "ロケール",
+  "mods": "Mod"
+}

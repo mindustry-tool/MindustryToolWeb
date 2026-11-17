@@ -1,0 +1,90 @@
+{
+    "name": "@mindustry-tool/api",
+    "version": "1.0.0",
+    "description": "",
+    "sideEffects": false,
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        "./package.json": "./package.json",
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./types": {
+            "types": "./dist/types/index.d.ts",
+            "import": "./dist/types/index.js",
+            "require": "./dist/types/index.cjs"
+        },
+        "./constants": {
+            "types": "./dist/constants/index.d.ts",
+            "import": "./dist/constants/index.js",
+            "require": "./dist/constants/index.cjs"
+        },
+        "./schemas": {
+            "types": "./dist/schemas/index.d.ts",
+            "import": "./dist/schemas/index.js",
+            "require": "./dist/schemas/index.cjs"
+        },
+        "./schema": {
+            "types": "./dist/schema/index.d.ts",
+            "import": "./dist/schema/index.js",
+            "require": "./dist/schema/index.cjs"
+        },
+        "./routes": {
+            "types": "./dist/routes/index.d.ts",
+            "import": "./dist/routes/index.js",
+            "require": "./dist/routes/index.cjs"
+        },
+        "./client": {
+            "types": "./dist/client/index.d.ts",
+            "import": "./dist/client/index.js",
+            "require": "./dist/client/index.cjs"
+        },
+        "./utils": {
+            "types": "./dist/utils/index.d.ts",
+            "import": "./dist/utils/index.js",
+            "require": "./dist/utils/index.cjs"
+        },
+        "./events": {
+            "types": "./dist/events/index.d.ts",
+            "import": "./dist/events/index.js",
+            "require": "./dist/events/index.cjs"
+        },
+        "./config": {
+            "types": "./dist/config/index.d.ts",
+            "import": "./dist/config/index.js",
+            "require": "./dist/config/index.cjs"
+        }
+    },
+    "scripts": {
+        "build": "tsup",
+        "build:es": "tsc --project tsconfig.es.json",
+        "lint": "eslint \"src/**/*.ts\" --fix",
+        "test": "vitest run",
+        "checkTreeShake": "npx agadoo"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "eventsource-parser": "^3.0.6",
+        "zod": "^4.1.13"
+    },
+    "allowJs": true,
+    "include": [
+        "."
+    ],
+    "exclude": [
+        "dist",
+        "node_modules"
+    ],
+    "devDependencies": {
+        "agadoo": "^3.0.0",
+        "typescript": "^5.9.3",
+        "vitest": "^4.1.11"
+    }
+}

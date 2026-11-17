@@ -1,0 +1,16 @@
+{
+  "empty": "파일이 비었습니다.",
+  "create-new-folder": "폴더 생성",
+  "create-new-file": "파일 만들기",
+  "delete": "파일 삭제",
+  "create": "새로운 파일 만들기",
+  "download": "파일 다운로드",
+  "edit": "편집",
+  "save": "변경 사항 저장",
+  "saving": "저장 중...",
+  "cancel": "취소",
+  "saved": "파일이 성공적으로 저장되었습니다",
+  "save-error": "파일 저장 실패",
+  "downloading": "파일 다운로드 중...",
+  "downloaded": "파일이 성공적으로 다운로드되었습니다"
+}

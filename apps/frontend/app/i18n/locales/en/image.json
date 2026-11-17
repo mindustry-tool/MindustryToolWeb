@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "Cloud",
+  "upload-from-local": "Local",
+  "upload-from-shared": "Shared library",
+  "upload-fail": "Upload failed",
+  "update": "Update",
+  "create-folder": "Create folder",
+  "model": "Model",
+  "settings": "Settings",
+  "aspect-ratio": "Aspect ratio",
+  "resolution": "Resolution",
+  "guidance": "Guidance (CFG)",
+  "steps": "Steps",
+  "prompt": "Prompt",
+  "prompt-placeholder": "Describe your image...",
+  "generate": "Generate"
+}

@@ -1,0 +1,20 @@
+{
+  "add-row-after": "아래에 행 추가",
+  "add-row-before": "위에 행 추가",
+  "delete-column": "열 삭제",
+  "merge-or-split": "병합 또는 분할",
+  "add-column-before": "왼쪽에 열 추가",
+  "delete-row": "행 삭제",
+  "go-to-next-cell": "다음 셀로 이동",
+  "merge-cells": "셀 병합",
+  "delete-table": "표 삭제",
+  "add-column-after": "오른쪽에 열 추가",
+  "toggle-header-cell": "제목 셀 토글",
+  "go-to-previous-cell": "이전 셀로 이동",
+  "toggle-header-column": "제목 열 토글",
+  "insert-table": "표 삽입",
+  "toggle-header-row": "제목 행 토글",
+  "fix-tables": "표 수정",
+  "set-cell-attribute": "셀 속성 설정",
+  "split-cell": "셀 분할"
+}

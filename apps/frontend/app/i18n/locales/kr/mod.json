@@ -1,0 +1,23 @@
+{
+  "installed": "모드가 설치되었습니다.",
+  "download": "모드 다운로드",
+  "install": "모드 설치",
+  "delete": "모드 삭제",
+  "title": "모드",
+  "nsfw-warning": "경고: 성인용(18+) 콘텐츠",
+  "more-topics": "+{{count}}개 더보기",
+  "no-mod-found": "모드를 찾을 수 없습니다",
+  "hidden-badge": "숨김",
+  "json-badge": "JSON",
+  "default-badge": "기본값",
+  "import-mod": "모드 가져오기",
+  "import-description": "가져올 모드의 URL을 입력하세요. 모드는 릴리스가 있는 GitHub 저장소여야 합니다.",
+  "import-url-placeholder": "모드 URL 입력",
+  "import-url-title": "올바른 GitHub 저장소 URL을 입력하세요",
+  "import-invalid-url": "유효하지 않은 GitHub 저장소 URL입니다",
+  "select": "선택",
+  "no-release": "릴리스 없음",
+  "release-draft": "초안",
+  "release-pre-release": "시험판(Pre-release)",
+  "downloads": "회 다운로드"
+}

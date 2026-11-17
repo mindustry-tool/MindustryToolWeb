@@ -1,0 +1,17 @@
+{
+  "upload-from-cloud": "클라우드",
+  "upload-from-local": "로컬",
+  "upload-from-shared": "라이브러리 공유",
+  "upload-fail": "업로드 실패",
+  "update": "업데이트",
+  "create-folder": "폴더 생성",
+  "model": "모델",
+  "settings": "설정",
+  "aspect-ratio": "화면비",
+  "resolution": "해상도",
+  "guidance": "가이던스 (CFG)",
+  "steps": "단계 수",
+  "prompt": "프롬프트",
+  "prompt-placeholder": "이미지를 설명하세요...",
+  "generate": "생성"
+}

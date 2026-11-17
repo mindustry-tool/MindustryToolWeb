@@ -1,0 +1,20 @@
+{
+  "add-row-after": "Дадаць радок пасля",
+  "add-row-before": "Дадаць радок да",
+  "delete-column": "Выдаліць слупок",
+  "merge-or-split": "Аб'яднаць або падзяліць",
+  "add-column-before": "Дадаць слупок да",
+  "delete-row": "Выдаліць радок",
+  "go-to-next-cell": "Пераход да наступнай ячэйкі",
+  "merge-cells": "Аб'яднаць ячэйкі",
+  "delete-table": "Выдаліць табліцу",
+  "add-column-after": "Дадаць слупок пасля",
+  "toggle-header-cell": "Пераключыць ячэйку загалоўка",
+  "go-to-previous-cell": "Пераход да папярэдняй ячэйкі",
+  "toggle-header-column": "Пераключыць слупок загалоўка",
+  "insert-table": "Уставіць табліцу",
+  "toggle-header-row": "Пераключыць радок загалоўка",
+  "fix-tables": "Выправіць табліцы",
+  "set-cell-attribute": "Задаць атрыбут ячэйкі",
+  "split-cell": "Падзяліць ячэйку"
+}

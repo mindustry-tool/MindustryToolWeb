@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="992" height="1859" viewBox="0 0 992 1859">
+  <defs>
+    <filter id="card-shadow" x="-10%" y="-5%" width="120%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000000" flood-opacity="0.06" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="992" height="1859" fill="#F4F6F9" />
+
+  <!-- Card Background -->
+  <rect x="56" y="220" width="880" height="1419" rx="40" fill="#FFFFFF" filter="url(#card-shadow)" />
+
+  <!-- Buy Me A Coffee Logo / Badge -->
+  <g transform="translate(496, 380)">
+    <circle cx="0" cy="0" r="54" fill="#FFDD00" />
+    <!-- Coffee Cup Icon -->
+    <path d="M-18 -12 C-18 -12 18 -12 18 -12 C18 -12 18 12 14 20 C10 26 -10 26 -14 20 C-18 12 -18 -12 -18 -12 Z" fill="#000000" />
+    <path d="M18 -6 C24 -6 26 2 26 6 C26 10 22 14 16 14" fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" />
+    <path d="M-8 -22 C-8 -16 -4 -18 -4 -14" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+    <path d="M4 -24 C4 -18 8 -20 8 -15" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+  </g>
+
+  <!-- Creator Title -->
+  <text x="496" y="490" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="700" fill="#18181B">
+    Nguyen Nhon Hau
+  </text>
+  <text x="496" y="540" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="500" fill="#71717A">
+    buymeacoffee.com/nguyennhonh
+  </text>
+
+  <!-- QR Code Container -->
+  <rect x="156" y="600" width="680" height="680" rx="24" fill="#FFFFFF" stroke="#F4F4F5" stroke-width="2" />
+  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYAQMAAACEqAqfAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAC0UlEQVR4nO3dPZLbMAyGYXpSuPQRdBQdTToaj6IjuHThWcakAAKk5SIzWyjm+1UOBT4qMfzRJoRfzJL6rPuDS0pbCDLyJ6WYRzQxj3T5wcLCwsI6tfUILrc88yoztzxyrdNfI3cZKdbmJ85YWFhYWGNZs9SL5VKGpQ/pSHl5sbQzPbCwsLCw/kdL28UmM5f0zNO1dwQsLCwsLKyDPpQftdGakoiFhYWFNbplsT70siapC34NI/mH/S8sLCwsrFNYfZozClt3lG5yy/1Fzyi6YGFhYWGNYn3ILAXlH2YFOQGJn+ZhYWFhYZ3UWpJLaQ6Sfd3hS5tdpWd+/OMvQGFhYWFhjWJZplx39zM36Tpp70PJWxqdoG0KCwsLC+v7rcW1FVesln1HYTO163QvD1hYWFhYJ7bs0WGKsOZf1mjMelt3YGFhYWGNYH28G5W68+3uOwo3ISmBhYWFhTWGdZRi9Ved5nSY4/0vLCwsLKyzWdI79LOIm6wySqZcrI9j7R3lVe+bXAELCwsLaxCrOdCoyt6ipnqvNsk2lX1H0cTvf2FhYWFhndcqPya5C7vWksnr7/tMekbR9g4sLCwsrK+3bN1Rcq8j73dhdWYTndDuWWFhYWFhfb2l92qtOL7dq42+D9lFXHt5wMLCwsI6u6VnFG0ryCnMuk93I9E3m7p0wcLCwsIayJqTS5lp645Hrmnuwl599V2OQ5KtO7CwsLCwvtw6ip6ANJlrsT2+eBULCwsL68zWkvqsbXPQZYnqZTDuC5WLrwlYWFhYWMNY8mPP4d2opZ5vm1XiViIRCwsLC+v81iw9QCzXO/x7Pu8z+d6BhYWFhTWqpXej5MFTanzXebWp5nbs8f9zjYWFhYU1jFWyycxaXL+4m1OfrGNhYWFhndyyHPaOdb/52pxvN3/Q6YqFhYWFNZbVp7MeUhNlzyrtL9fz7XbPCgsLCwtrBOsX8xdr+W9VSXTHggAAAABJRU5ErkJggg==" x="186" y="630" width="620" height="620" style="image-rendering: pixelated;" />
+
+  <!-- Card Footer CTA -->
+  <g transform="translate(496, 1370)">
+    <rect x="-240" y="-32" width="480" height="64" rx="32" fill="#FFDD00" />
+    <text x="0" y="9" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="600" fill="#000000">
+      Buy me a coffee
+    </text>
+  </g>
+
+  <!-- Subtext -->
+  <text x="496" y="1490" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="400" fill="#71717A">
+    Scan with camera to support
+  </text>
+</svg>

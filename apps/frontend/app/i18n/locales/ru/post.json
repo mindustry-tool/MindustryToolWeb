@@ -1,0 +1,16 @@
+{
+  "new-post": "Новый пост",
+  "title": "Заголовок",
+  "summary": "Краткое описание",
+  "cover": "Обложка",
+  "language": "Язык",
+  "status": "Статус",
+  "status-PUBLISHED": "Опубликовано",
+  "select-cover": "Выбрать изображение обложки",
+  "submitting": "Отправка...",
+  "submit-success": "Успешно отправлено",
+  "browse-post": "Просмотр поста",
+  "report": "Пожаловаться",
+  "status-ARCHIVED": "В архиве",
+  "status-DRAFT": "Черновик"
+}

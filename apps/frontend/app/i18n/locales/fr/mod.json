@@ -1,0 +1,23 @@
+{
+  "installed": "Mods installés",
+  "download": "Télécharger les mods",
+  "install": "Installer le mod",
+  "delete": "Supprimer le mod",
+  "title": "Modifications",
+  "nsfw-warning": "Avertissement contenu 18+",
+  "more-topics": "+{{count}} de plus",
+  "no-mod-found": "Aucun mod trouvé",
+  "hidden-badge": "Masqué",
+  "json-badge": "JSON",
+  "default-badge": "Défaut",
+  "import-mod": "Importer un mod",
+  "import-description": "Entrez l'URL du mod à importer. Le mod doit provenir d'un dépôt GitHub comportant une release.",
+  "import-url-placeholder": "Entrez l'URL du mod",
+  "import-url-title": "Entrez une URL de dépôt GitHub valide",
+  "import-invalid-url": "URL de dépôt GitHub invalide",
+  "select": "Sélectionner",
+  "no-release": "Aucune version",
+  "release-draft": "Brouillon",
+  "release-pre-release": "Version préliminaire",
+  "downloads": "téléchargements"
+}

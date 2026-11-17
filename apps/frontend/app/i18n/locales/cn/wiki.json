@@ -1,0 +1,12 @@
+{
+  "remove-link-description": "取消关联此文章",
+  "remove-link": "移除链接",
+  "link": "关联 Wiki",
+  "link-description": "将 Wiki 页面关联至文章",
+  "path": "路径",
+  "create-description": "创建新的 Wiki 页面",
+  "edit-description": "编辑 Wiki 页面",
+  "delete-description": "删除此记录",
+  "home": "首页",
+  "nothing-there-yet": "暂无内容，请选择其他语言"
+}

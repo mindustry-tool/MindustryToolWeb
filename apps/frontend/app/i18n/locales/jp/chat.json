@@ -1,0 +1,22 @@
+{
+  "online-users": "オンラインユーザー",
+  "users": "ユーザー",
+  "new-chat": "新規チャット",
+  "thinking": "考え中...",
+  "channels": "チャンネル",
+  "online": "オンライン",
+  "please-sign-in": "チャットするにはログインしてください",
+  "your-message": "メッセージ",
+  "read-without-sign-in": "ログインなしでメッセージを閲覧できます",
+  "replying-to-message": "メッセージに返信中",
+  "no-message-yet": "まだメッセージはありません",
+  "disconnected": "切断されました",
+  "nobody-online": "オンラインのユーザーはいません",
+  "replying": "返信中",
+  "reply": "返信",
+  "show-less": "折りたたむ",
+  "show-more": "もっと見る",
+  "original-message-unavailable": "元のメッセージは利用できません",
+  "ask-anything": "何でも聞いてください...",
+  "delete-confirm": "このメッセージを削除してもよろしいですか？"
+}

@@ -1,0 +1,20 @@
+{
+  "add-row-after": "下に行を挿入",
+  "add-row-before": "上に行を挿入",
+  "delete-column": "列を削除",
+  "merge-or-split": "结合または分割",
+  "add-column-before": "左に列を挿入",
+  "delete-row": "行を削除",
+  "go-to-next-cell": "次のセルへ移動",
+  "merge-cells": "セルを結合",
+  "delete-table": "表を削除",
+  "add-column-after": "右に列を挿入",
+  "toggle-header-cell": "ヘッダーセルの切り替え",
+  "go-to-previous-cell": "前のセルへ移動",
+  "toggle-header-column": "ヘッダー列の切り替え",
+  "insert-table": "表を挿入",
+  "toggle-header-row": "ヘッダー行の切り替え",
+  "fix-tables": "表を修復",
+  "set-cell-attribute": "セル属性を設定",
+  "split-cell": "セルを分割"
+}

@@ -1,0 +1,22 @@
+{
+  "online-users": "在线用户",
+  "users": "用户",
+  "new-chat": "新对话",
+  "thinking": "思考中...",
+  "channels": "频道",
+  "online": "在线",
+  "please-sign-in": "请登录后参与聊天",
+  "your-message": "您的消息",
+  "read-without-sign-in": "无需登录即可阅读消息",
+  "replying-to-message": "回复消息中",
+  "no-message-yet": "暂无消息",
+  "disconnected": "已断开连接",
+  "nobody-online": "暂无在线人员",
+  "replying": "正在回复",
+  "reply": "回复",
+  "show-less": "显示更少",
+  "show-more": "显示更多",
+  "original-message-unavailable": "原始消息不可用",
+  "ask-anything": "畅所欲言...",
+  "delete-confirm": "确定要删除这条消息吗？"
+}

@@ -1,0 +1,12 @@
+{
+  "remove-link-description": "Unlink this post",
+  "remove-link": "Remove link",
+  "link": "Link wiki",
+  "link-description": "Links a wiki page to a post",
+  "path": "Path",
+  "create-description": "Create new wiki page",
+  "edit-description": "Edit wiki page",
+  "delete-description": "Delete this record",
+  "home": "Home",
+  "nothing-there-yet": "Nothing there yet, please choose another language"
+}
